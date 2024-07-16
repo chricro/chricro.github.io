@@ -1,6 +1,6 @@
 ---
 # Display name
-title: 吳健雄
+title: Christophe Troalen
 
 # Name pronunciation (optional)
 name_pronunciation: ''
@@ -26,9 +26,6 @@ organizations:
 # Social network links
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
 profiles:
-  - icon: at-symbol
-    url: 'mailto:your-email@example.com'
-    label: E-mail Me
   - icon: brands/github
     url: https://github.com/chricro
   - icon: brands/linkedin
@@ -40,10 +37,18 @@ education:
     date_start: 2022-10-03
     date_end: 2023-10-02
     summary: |
-      Thesis on _Why LLMs are awesome_. Supervised by [Prof Joe Smith](https://example.com). Presented papers at 5 IEEE conferences with the contributions being published in 2 Springer journals.
-    button:
-      text: 'Read Thesis'
-      url: 'https://example.com'
+
+      Courses included:
+      - Applied statistics
+      - Computational statistics
+      - Probability for statistics
+      - Fundamentals of statistical inference
+      - Big Data
+      - Effective Data Science
+      - Machine Learning
+      - Deep Learning
+      - Advanced statistical finance
+    
   - area: MEng Data Science
     institution: Télécom SudParis - Institut Polytechnique de Paris
     date_start: 2020-09-01
@@ -79,17 +84,18 @@ work:
       Responsibilities include:
       - Maintaining the scalability and operational efficiency of large language models (LLMs) with constant verification, refinement, and maintenance, ensuring the models remain at the industry's cutting edge.
       - Actively participating in advanced research and development activities to stay updated on the latest advancements in generative AI.
-  - position: Backend Software Engineer
-    company_name: X
+  - position: Research Assistant
+    company_name: Imperial College London
     company_url: ''
     company_logo: ''
-    date_start: 2016-01-01
-    date_end: 2020-12-31
+    date_start: 2023-05-01
+    date_end: 2023-09-30
     summary: |
-      Responsibilities include:
-      - Migrated infrastructure to a new data center
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+      - Focused on filtering and smoothing geospatial data with heavy-tailed distributed errors, supervised by Prof. Adam Sykulski and Prof. Alessandra Luati. (Grade: distinction)
+      - Effectively presented results, data, and conclusions to PhD students and professors (MSc Best Research Poster Presentation: 1st/60).
+    button:
+    text: 'Read Thesis'
+    url: 'https://example.com'
 
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
@@ -98,32 +104,40 @@ skills:
     items:
       - name: Python
         description: ''
-        percent: 80
+        percent: 95
         icon: devicon/python
-      - name: RStudio
+      - name: R
         description: ''
-        percent: 100
+        percent: 70
         icon: devicon/rstudio
-      - name: PyTorch
+      - name: SQL
         description: ''
-        percent: 40
-        icon: devicon/pytorch
+        percent: 70
+      - name: Latex
+        description: ''
+        percent: 90
+      - name: Bash
+        description: ''
+        percent: 80
+      - name: PySpark
+        description: ''
+        percent: 55
   - name: Hobbies
     color: '#eeac02'
     color_border: '#f0bf23'
     items:
-      - name: Hiking
+      - name: Piano
         description: ''
-        percent: 60
+        percent: 90
+        icon: piano
+      - name: Triathlon
+        description: ''
+        percent: 70
         icon: person-simple-walk
-      - name: Cats
+      - name: Chess
         description: ''
-        percent: 100
-        icon: cat
-      - name: Photography
-        description: ''
-        percent: 80
-        icon: camera
+        percent: 70
+        icon: chess
 
 languages:
   - name: French
@@ -167,4 +181,4 @@ awards:
       Object-oriented programming (OOP) lets you specify relationships between functions and the objects that they can act on, helping you manage complexity in your code. This is an intermediate level course, providing an introduction to OOP, using the S3 and R6 systems. S3 is a great day-to-day R programming tool that simplifies some of the functions that you write. R6 is especially useful for industry-specific analyses, working with web APIs, and building GUIs.
 ---
 
-I am currently Director of Cloud Infrastructure at GenCoin where I am leading teams on edge computing, deep sea data center architecture, and hivemind optimization.
+I am currently a Machine Learning Research in a startup in AI based in London.
