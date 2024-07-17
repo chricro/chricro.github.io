@@ -9,10 +9,6 @@ name_pronunciation: ''
 first_name: Christophe
 last_name: Troalen
 
-# Status emoji
-status:
-  icon: ☕️
-
 # Is this the primary user of the site?
 superuser: true
 
@@ -93,7 +89,7 @@ work:
     summary: |
       - Focused on filtering and smoothing geospatial data with heavy-tailed distributed errors, supervised by Prof. Adam Sykulski and Prof. Alessandra Luati. (Grade: distinction)
       - Effectively presented results, data, and conclusions to PhD students and professors (MSc Best Research Poster Presentation: 1st/60).
-    button:
+    button: |
     text: 'Read Thesis'
     url: 'https://example.com'
 
@@ -112,32 +108,39 @@ skills:
         icon: devicon/rstudio
       - name: SQL
         description: ''
+        icon: devicon/postgresql
         percent: 70
       - name: Latex
         description: ''
+        icon: devicon/latex
         percent: 90
       - name: Bash
         description: ''
+        icon: devicon/bash
         percent: 80
       - name: PySpark
         description: ''
         percent: 55
+        icon: devicon/hadoop
   - name: Hobbies
     color: '#eeac02'
     color_border: '#f0bf23'
     items:
-      - name: Piano
+      - name: ':musical_keyboard: Piano'
         description: ''
         percent: 90
-        icon: piano
-      - name: Triathlon
+      - name: ':movie_camera: Movies'
+        description: ''
+        percent: 75
+      - name: ':person_running: Triathlon'
+        description: ''
+        percent: 60
+      - name: ':chess_pawn: Chess'
         description: ''
         percent: 70
-        icon: person-simple-walk
-      - name: Chess
+      - name: ':wine_glass: Wine-tasting'
         description: ''
-        percent: 70
-        icon: chess
+        percent: 35
 
 languages:
   - name: French
@@ -154,31 +157,60 @@ languages:
 #   Only `title`, `awarder`, and `date` are required.
 #   Begin multi-line `summary` with YAML's `|` or `|2-` multi-line prefix and indent 2 spaces below.
 awards:
+  - title: 'Quantitative Research Virtual Experience Program'
+    url: https://www.theforage.com/simulations/jpmorgan/quantitative-research-11oc
+    certificate_url: uploads/JPMorgan Quant Research.pdf
+    date: '2023-07-06'
+    awarder: JPMorgan Chase & Co.
+    summary: |
+      - Investigate and analyze price data
+      - Price a commodity storage contract
+      - Credit risk analysis
+      - Bucket FICO scores
+  - title: 'Genhack 2 - Generative Modelling Challenge'
+    url: https://www.hi-paris.fr/tag/hackathon/
+    certificate_url: uploads/Genhack 2 Certificate.pdf
+    date: '2023-02-07'
+    awarder: Ecole Polytechnique and BNP Paribas
+    summary: |
+      The Generative Modelling Challenge 2022, organized by Ecole Polytechnique and BNP PARIBAS, is a 1-month data challenge on generative models to study the evolution of ocean temperature spatially and across the years in the context of climate change, based on real data.
   - title: Neural Networks and Deep Learning
-    url: https://www.coursera.org/learn/neural-networks-deep-learning
-    date: '2023-11-25'
+    url: https://coursera.org/share/39a4ef6b6f68d65e63a4af061a647bc9
+    date: '2022-08-06'
     awarder: Coursera
     icon: coursera
     summary: |
-      I studied the foundational concept of neural networks and deep learning. By the end, I was familiar with the significant technological trends driving the rise of deep learning; build, train, and apply fully connected deep neural networks; implement efficient (vectorized) neural networks; identify key parameters in a neural network’s architecture; and apply deep learning to your own applications.
-  - title: Blockchain Fundamentals
-    url: https://www.edx.org/professional-certificate/uc-berkeleyx-blockchain-fundamentals
-    date: '2023-07-01'
-    awarder: edX
-    icon: edx
+      - Artificial Neural Networks
+      - Deep Learning
+      - Python Programming
+  - title: Getting started with TensorFlow 2
+    url: https://coursera.org/share/7fc751d17de5f65fb15f14a1dccb2073
+    date: '2022-06-27'
+    awarder: Coursera
+    icon: coursera
     summary: |
-      Learned:
-      - Synthesize your own blockchain solutions
-      - Gain an in-depth understanding of the specific mechanics of Bitcoin
-      - Understand Bitcoin’s real-life applications and learn how to attack and destroy Bitcoin, Ethereum, smart contracts and Dapps, and alternatives to Bitcoin’s Proof-of-Work consensus algorithm
-  - title: 'Object-Oriented Programming in R'
-    url: https://www.datacamp.com/courses/object-oriented-programming-with-s3-and-r6-in-r
-    certificate_url: https://www.datacamp.com
-    date: '2023-01-21'
-    awarder: datacamp
-    icon: datacamp
+      - Tensorflow
+      - Applied Machine Learning
+      - Artificial Neural Networks
+  - title: 'H!ckathon 2'
+    url: https://www.hi-paris.fr/tag/hackathon/
+    certificate_url: uploads/H! Paris Certificate.pdf
+    date: '2022-03-15'
+    awarder: Institut Polytechnique de Paris
     summary: |
-      Object-oriented programming (OOP) lets you specify relationships between functions and the objects that they can act on, helping you manage complexity in your code. This is an intermediate level course, providing an introduction to OOP, using the S3 and R6 systems. S3 is a great day-to-day R programming tool that simplifies some of the functions that you write. R6 is especially useful for industry-specific analyses, working with web APIs, and building GUIs.
+      The Hi!ckathon 2, organized by Institut Polytechnique de Paris (IP Paris), HEC Paris and Inria, is an intensive hackathon in Data Science, Artificial Intelligence and Entrepreneurship on March 5th and 6th 2022 and preceded by a 5-week training on Artificial Intelligence.
+  - title: 'Project Management MOOC'
+    url: https://www.hi-paris.fr/tag/hackathon/
+    certificate_url: uploads/Certificate Project Management.pdf
+    date: '2020-12-14'
+    awarder: Centrale Lille
+    summary: |
+      - Basics of project management and organization.
+      - Goal negotiation, meeting management, task distribution.
+      - Advanced tools for project design, planning, and budgeting.
+      - Risk identification, prioritization, and monitoring.
+
+
 ---
 
 I am currently a Machine Learning Research in a startup in AI based in London.

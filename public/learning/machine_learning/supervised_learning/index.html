@@ -44,7 +44,7 @@
   <meta name="description" content="A highly-customizable Hugo résumé theme powered by Hugo Blox Builder." />
 
   
-  <link rel="alternate" hreflang="en-us" href="http://localhost:1313/404.html" />
+  <link rel="alternate" hreflang="en-us" href="http://localhost:1313/learning/machine_learning/supervised_learning/" />
 
   
   
@@ -156,12 +156,14 @@
 
   
   
+    <link rel="alternate" href="/learning/machine_learning/supervised_learning/index.xml" type="application/rss+xml" title="Christophe Troalen" />
+  
 
   
   <link rel="icon" type="image/png" href="/media/icon_hu68170e94a17a2a43d6dcb45cf0e8e589_3079_32x32_fill_lanczos_center_3.png" />
   <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu68170e94a17a2a43d6dcb45cf0e8e589_3079_180x180_fill_lanczos_center_3.png" />
 
-  <link rel="canonical" href="http://localhost:1313/404.html" />
+  <link rel="canonical" href="http://localhost:1313/learning/machine_learning/supervised_learning/" />
 
   
   
@@ -187,11 +189,13 @@
     <meta property="twitter:creator" content="@GetResearchDev" />
   
   <meta property="og:site_name" content="Christophe Troalen" />
-  <meta property="og:url" content="http://localhost:1313/404.html" />
-  <meta property="og:title" content="404 Page not found | Christophe Troalen" />
+  <meta property="og:url" content="http://localhost:1313/learning/machine_learning/supervised_learning/" />
+  <meta property="og:title" content="Supervised learning | Christophe Troalen" />
   <meta property="og:description" content="A highly-customizable Hugo résumé theme powered by Hugo Blox Builder." /><meta property="og:image" content="http://localhost:1313/media/icon_hu68170e94a17a2a43d6dcb45cf0e8e589_3079_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="http://localhost:1313/media/icon_hu68170e94a17a2a43d6dcb45cf0e8e589_3079_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
   
+    
+      <meta property="og:updated_time" content="2022-10-24T00:00:00&#43;00:00" />
     
   
 
@@ -200,7 +204,7 @@
 
 
 
-  <title>404 Page not found | Christophe Troalen</title>
+  <title>Supervised learning | Christophe Troalen</title>
 
   
   
@@ -681,28 +685,238 @@
         
       
     </div>
-    <div class="page-body  my-10">
-      <div class="flex flex-col justify-center">
-  <article class="container mx-auto prose prose-slate lg:prose-xl dark:prose-invert">
-    <h1 class="lg:text-6xl">Page not found</h1>
-
-    
-
-    <p>Perhaps you were looking for one of these?</p>
-
-    
-    
-    
-    <h2>Latest</h2>
-    <ul>
+    <div class="page-body ">
       
-      <li><a href="/learning/machine_learning/supervised_learning/">Supervised learning</a></li>
-      
-    </ul>
+
+  
+  
     
 
-  </article>
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="section-markdown" class="relative hbb-section blox-markdown  " style="padding: 6rem 0 6rem 0;" >
+ <div class="home-section-bg " >
+   
+ </div>
+  
+
+  
+
+    
+
+
+
+
+
+
+
+
+
+<div class="flex flex-col items-center max-w-prose mx-auto gap-3 justify-center">
+
+  <div class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">
+    
+  </div>
+
+  
+  <div class="prose prose-slate lg:prose-xl dark:prose-invert max-w-prose"><h2 id="approaches-to-classification">Approaches to Classification</h2>
+<p><strong>Generative Approach</strong></p>
+<p>The generative approach models the class-conditional densities $p(x \mid y = k)$ as well as the class priors $p(y = k)$, and uses these to compute posterior probabilities $p(y = k \mid x)$ with <em>Bayes’ theorem</em>. We can use this approach to generate typical data from the model by drawing samples from $p(x \mid y = k)$.</p>
+<p><strong>Examples of generative classifiers include:</strong></p>
+<ul>
+<li>Linear Discriminant Analysis (LDA)</li>
+<li>Quadratic Discriminant Analysis (QDA)</li>
+<li>Naive Bayes</li>
+</ul>
+<p><strong>Linear Discriminant Analysis (LDA) and Quadratic Discriminant Analysis (QDA)</strong></p>
+<p>These classifiers partition $X = \mathbb{R}^d$ into regions with consistent class predictions through separating hyperplanes. The conditional densities are modeled as multivariate normal for each class $k$: </p>
+$$X \sim N(\mu_k,\Sigma_k)$$
+<p>Discriminant functions are defined as:
+</p>
+$$g_k(X) = \log(P(X|Y=k)) + \log(P(Y=k))$$
+<p>For two-class problems, the optimal classifier is:
+</p>
+$$f^*: x \mapsto 2 \cdot \mathbb{1} \lbrace g_1(x) - g_{-1}(x) > 0 \rbrace - 1$$
+<ul>
+<li><strong>LDA</strong> assumes equal covariance across classes ($\Sigma_k = \Sigma$).</li>
+<li><strong>QDA</strong> allows different covariances in each class, creating quadratic decision boundaries.</li>
+</ul>
+<p><strong>Naive Bayes Classifier</strong></p>
+<p>This classifier selects the class that maximizes the posterior probability given the observation:
+</p>
+$$\text{argmax}_k p(y = k \mid x) = \text{argmax}_k p(x \mid y = k) p(y = k)$$
+<p>Naive Bayes simplifies the computation by assuming conditional independence among features:
+</p>
+$$p(x|y = k) = \prod_{i=1}^d p(x_i|y = k,\theta_{ik})$$
+<p><strong>Examples of Naive Bayes models based on feature types:</strong></p>
+<ul>
+<li><strong>Gaussian distribution</strong> for real-valued features:
+$$p(x|y=k;\theta)=\prod_{j=1}^d \Phi(x|\mu ,\sigma^2)$$</li>
+<li><strong>Bernoulli distribution</strong> for binary features:
+$$p(x|y = k;\theta) = \prod_{j=1}^d Ber(x_j|\theta_{jk})$$</li>
+<li><strong>Multinomial distribution</strong> for count data.</li>
+</ul>
+<p><strong>Discriminative Approach</strong></p>
+<p>Instead of modeling class-conditional densities, the discriminative approach models the conditional probability $p(y = k \mid x)$ directly, often using a generalised linear model framework.</p>
+<p><strong>Examples of discriminative classifiers include:</strong></p>
+<ul>
+<li>Logistic Regression</li>
+<li>K-nearest Neighbors (KNN)</li>
+<li>Support Vector Machines (SVMs)</li>
+<li>Perceptrons</li>
+</ul>
+<p><strong>Logistic Regression</strong></p>
+<p>Aims to predict the label $Y\in \lbrace 0, 1 \rbrace$ based on features $X \in \mathbb{R}^d$. Logistic regression explicitly models the distribution of $Y$ given $X$</p>
+<p>This template improves readability by segmenting information into clearly defined sections and using consistent formatting for mathematical expressions and classification types. It should enhance both aesthetic appeal and navigational ease on your website.</p>
+$$P(Y=1|X) = \sigma(\langle w,X \rangle +b)$$
+<p>where $w \in \mathbb{R}^d$ is a vector of model weights and $b \in \mathbb{R}$ is the intercept, and $\sigma$ is the sigmoid function defined as:</p>
+$$\sigma: z \mapsto \frac{1}{1+e^{-z}}$$
+<p>We define the log-odd ratio as:</p>
+$$\log(P(Y=1|X)) - \log(P(Y=0|X)) = \langle w, X \rangle +b$$
+<p>Thus, we have:</p>
+$$P(Y=1|X) \geq P(Y=0|X) \iff \langle w,X \rangle +b$$
+<p>defining our classification rule (linear classification rule) which requires to estimate $w$ and $b$. These latter parameters can be estimated by Maximum Likelihood estimation.</p>
+<p>For a multi-label classification, we can extend the logistic regression. The objective is to predict the label $Y \in \lbrace 1, ..., M \rbrace$ based on $X \in \mathbb{R}^d$. Softmax regression models the distribution of $Y$ given $X$.</p>
+<p>For all $1 \leq m \leq M$,</p>
+$$z_m = \langle w_m, X \rangle + b_m$$
+<p>and</p>
+$$P(Y=m \mid X) = \text{softmax}(z)_m$$
+<p>where $z \in \mathbb{R}^M$, $w_m \in \mathbb{R}^d$ is a vector of model weights and $b_m \in \mathbb{R}$ is an intercept, and</p>
+$$\text{softmax}(z)_m = \frac{\exp(z_m)}{\sum_{j=1}^M \exp(z_j)}$$
+<p>One neuron is a multi-class extension of the logistic regression model.</p>
+<h1 id="regression">Regression:</h1>
+<p><strong>Multidimensional Framework</strong></p>
+<p>We now assume that the model is given by:
+</p>
+$$ Y_i = X_i^T \beta_* + \mathcal{E}_i $$
+<p>
+where $X_i \in \mathbb{R}^d $, $\beta_* \in \mathbb{R}^d$, and where $(\mathcal{E}_i)_{1 \leq i \leq n}$ are independent, identically distributed, and centered.</p>
+<p>We can write the model:
+</p>
+$$ Y = X \beta_* + \mathcal{E} $$
+<p>where:
+</p>
+$$
+\mathcal{E} = \begin{pmatrix} \mathcal{E}_1 \\ \vdots \\ \mathcal{E}_n \end{pmatrix}, \quad
+Y = \begin{pmatrix} Y_1 \\ \vdots \\ Y_n \end{pmatrix}, \quad
+X = \begin{pmatrix} X_1^T \\ \vdots \\ X_n^T \end{pmatrix} \in \mathbb{R}^{n \times d}
+$$
+<p>The least squares estimator is then:
+</p>
+$$ \hat{\beta}_n \in \operatorname{Argmin}_{\beta \in \mathbb{R}^d} \|Y - X \beta\|_2^2 $$
+<p><strong>Proposition:</strong></p>
+<p>If $ X^T X $ is invertible, then:
+</p>
+$$ \hat{\beta}_n = (X^T X)^{-1} X^T Y $$
+<p>Moreover, if $\mathbb{V}[\mathcal{E}_i] = \sigma_*^2 $, then:
+</p>
+$$ \mathbb{V}[\hat{\beta}_n] = \frac{\sigma_*^2}{n} (X^T X)^{-1} $$
+<p><strong>Proof:</strong></p>
+<p>For all $\beta \in \mathbb{R}^d$, we have:
+</p>
+$$ \|Y - X\beta\|_2^2 = \|Y\|_2^2 + \beta^T X^T X \beta - 2 \beta^T X^T Y $$
+<p>Hence,
+</p>
+$$ \nabla_{\beta} \|Y - X\beta\|_2^2 = 2 X^T X \beta - 2 X^T Y $$
+<p>The gradient of the squared norm is zero when:
+</p>
+$$ \nabla_{\beta} \|Y - X\beta\|_2 = 0 \Leftrightarrow \hat{\beta} = (X^T X)^{-1} X^T Y $$
+<p>Moreover, the variance of $\hat{\beta}_n$ is given by:
+</p>
+$$ \mathbb{V}[\hat{\beta}_n] = (X^T X)^{-1} X^T \mathbb{V}[Y] X (X^T X)^{-1} $$
+<p>Since $\mathbb{V}[Y] = \sigma_*^2 I_n$, we have:
+</p>
+$$ \mathbb{V}[\hat{\beta}_n] = \sigma_*^2 (X^T X)^{-1} $$
 </div>
+</div>
+
+
+  
+
+  
+</section>
+
+  
+
+
     </div>
     <div class="page-footer">
       <footer class="container mx-auto flex flex-col justify-items-center text-sm leading-6 mt-24 mb-4 text-slate-700 dark:text-slate-200">

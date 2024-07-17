@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sections | Christophe Troalen</title>
+    <link>http://localhost:1313/sections/</link>
+      <atom:link href="http://localhost:1313/sections/index.xml" rel="self" type="application/rss+xml" />
+    <description>Sections</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language>
+    <image>
+      <url>http://localhost:1313/media/icon_hu68170e94a17a2a43d6dcb45cf0e8e589_3079_512x512_fill_lanczos_center_3.png</url>
+      <title>Sections</title>
+      <link>http://localhost:1313/sections/</link>
+    </image>
+    
+    <item>
+      <title>Contents</title>
+      <link>http://localhost:1313/sections/learning/main/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/sections/learning/main/</guid>
+      <description>&lt;p&gt;This website, currently under construction, is an organised compilation of notes on a variety of subjects, including statistical learning {% include sidenote.html id=&amp;ldquo;note-pgm&amp;rdquo; note=&amp;ldquo;Statistical learning &lt;/p&gt;
+$$\approx$$
+&lt;p&gt; statistics + machine learning&amp;rdquo; %}, generative artificial intelligence, and finance.&lt;/p&gt;
+&lt;h2 id=&#34;statistical-learning&#34;&gt;Statistical learning&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Statistical learning&lt;/em&gt; involves a collection of techniques designed to analyze and interpret complex datasets. This emerging field within statistics integrates closely with advancements in computer science, especially machine learning. It includes a variety of methods like lasso and sparse regression, classification and regression trees, as well as boosting and support vector machines. The surge in &lt;em&gt;Big Data&lt;/em&gt; challenges has significantly heightened the relevance of statistical learning across various scientific fields, in addition to financial sectors.&lt;/p&gt;
+&lt;p&gt;Here is a synthesis of various elements I learned from Machine Learning courses at Télécom SudParis (2020-2022) and Imperial College London (2022-2023). I aim to keep explanations concise, so this is not an exhaustive list.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;machine_learning/supervised_learning/&#34;&gt;Supervised learning&lt;/a&gt;: Generative approache (LDA/GDA, Naive Bayes) vs discriminant approach (logistic regression).&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;machine_learning/unsupervised_learning/&#34;&gt;Unsupervised learning&lt;/a&gt;: Dimension reduction (PCA, Kernel PCA). Unsupervised clustering (K-means, K-medoids). Latent data (EM algorithm).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;generative-ai&#34;&gt;Generative AI&lt;/h2&gt;
+&lt;p&gt;Here are some notes on Generative AI that I wrote while working full-time at a startup.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;ai/llm/&#34;&gt;An overview of large language models&lt;/a&gt;: Pretraining, instruction fine-tuning, alignment techniques. Frameworks to deploy LLMs efficiently, optimization of inference. How to improve reasoning. Vision transformers.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;ai/resources/&#34;&gt;Useful resources&lt;/a&gt;: Benchmarks and leaderboards, interesting blogs and github resources.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;finance&#34;&gt;Finance&lt;/h2&gt;
+&lt;p&gt;As someone eager to apply my statistical and machine learning knowledge to practical problems and real-world scenarios, I find finance to be a fascinating field for research and exploration.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;finance/books/&#34;&gt;Book Excerpts&lt;/a&gt;: Here are extracts from books that I find interesting and educational, as well as areas I am willing to explore.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
