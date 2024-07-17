@@ -26,7 +26,13 @@ profiles:
     url: https://github.com/chricro
   - icon: brands/linkedin
     url: https://www.linkedin.com/troalenchristophe
-
+quick_education:
+  - block: markdown
+    id: section-1
+    content:
+      title: Section 1
+      subtitle: A subtitle
+      text: Add any **markdown** formatted content here - text, images, videos, galleries - and even HTML code!
 education:
   - area: MSc Statistics
     institution: Imperial College London
@@ -52,14 +58,16 @@ education:
     summary: |
 
       Courses included:
+      - Probability and statistics
       - Statistical learning
       - Bayesian inference in Markov chains
       - Data analysis and data mining
       - Stochastic processes and time-series analysis
       - Introduction to extreme values theory
       - Applied statistics
-      - Information theory
+      - Coding and information theory
       - Optimization
+      - Relational databases
 
   - area: Classe préparatoire (MP)
     institution: Lycée Clemenceau de Nantes

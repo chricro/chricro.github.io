@@ -12,9 +12,10 @@ sections:
 - block: markdown
   content:
     text: |-
+        # Learning notes
         This part of the website is currently under construction. It collects a compilation of my notes on a variety of subjects, including statistics, machine learning, generative artificial intelligence, and finance.
 
-        # Statistical learning
+        ## Statistical learning
 
         *Statistical learning* involves a collection of techniques designed to analyze and interpret complex datasets. This emerging field within statistics integrates closely with advancements in computer science, especially machine learning. It includes a variety of methods like lasso and sparse regression, classification and regression trees, as well as boosting and support vector machines. The surge in *Big Data* challenges has significantly heightened the relevance of statistical learning across various scientific fields, in addition to financial sectors.
 

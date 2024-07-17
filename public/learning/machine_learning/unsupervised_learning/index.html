@@ -1,0 +1,1110 @@
+<!doctype html>
+<!-- This site was created with Hugo Blox. https://hugoblox.com -->
+<!-- Last Published: July 17, 2024 --><html lang="en-us" dir="ltr"
+      data-wc-theme-default="system">
+  
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="Hugo Blox Builder 0.2.0" />
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Christophe Troalen" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="A highly-customizable Hugo résumé theme powered by Hugo Blox Builder." />
+
+  
+  <link rel="alternate" hreflang="en-us" href="//localhost:1313/learning/machine_learning/unsupervised_learning/" />
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="/css/themes/blue.min.css" />
+  
+
+  
+  
+    
+    <link href="/dist/wc.min.css" rel="stylesheet" />
+  
+
+  
+  
+  
+
+  
+
+  <script>
+     
+    window.hbb = {
+       defaultTheme: document.documentElement.dataset.wcThemeDefault,
+       setDarkTheme: () => {
+        document.documentElement.classList.add("dark");
+        document.documentElement.style.colorScheme = "dark";
+      },
+       setLightTheme: () => {
+        document.documentElement.classList.remove("dark");
+        document.documentElement.style.colorScheme = "light";
+      }
+    }
+
+    console.debug(`Default Hugo Blox Builder theme is ${window.hbb.defaultTheme}`);
+
+    if ("wc-color-theme" in localStorage) {
+      localStorage.getItem("wc-color-theme") === "dark" ? window.hbb.setDarkTheme() : window.hbb.setLightTheme();
+    } else {
+      window.hbb.defaultTheme === "dark" ? window.hbb.setDarkTheme() : window.hbb.setLightTheme();
+      if (window.hbb.defaultTheme === "system") {
+        window.matchMedia("(prefers-color-scheme: dark)").matches ? window.hbb.setDarkTheme() : window.hbb.setLightTheme();
+      }
+    }
+  </script>
+
+  <script>
+    
+    document.addEventListener('DOMContentLoaded', function () {
+      
+      let checkboxes = document.querySelectorAll('li input[type=\'checkbox\'][disabled]');
+      checkboxes.forEach(e => {
+        e.parentElement.parentElement.classList.add('task-list');
+      });
+
+      
+      const liNodes = document.querySelectorAll('.task-list li');
+      liNodes.forEach(nodes => {
+        let textNodes = Array.from(nodes.childNodes).filter(node => node.nodeType === 3 && node.textContent.trim().length > 1);
+        if (textNodes.length > 0) {
+          const span = document.createElement('label');
+          textNodes[0].after(span);  
+          span.appendChild(nodes.querySelector('input[type=\'checkbox\']'));
+          span.appendChild(textNodes[0]);
+        }
+      });
+    });
+  </script>
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="alternate" href="/learning/machine_learning/unsupervised_learning/index.xml" type="application/rss+xml" title="Christophe Troalen" />
+  
+
+  
+  <link rel="icon" type="image/png" href="/media/icon_hu46dc342dc73747a5b6d02fd72281b953_24285_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu46dc342dc73747a5b6d02fd72281b953_24285_180x180_fill_lanczos_center_3.png" />
+
+  <link rel="canonical" href="//localhost:1313/learning/machine_learning/unsupervised_learning/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary" />
+  
+    <meta property="twitter:site" content="@GetResearchDev" />
+    <meta property="twitter:creator" content="@GetResearchDev" />
+  
+  <meta property="og:site_name" content="Christophe Troalen" />
+  <meta property="og:url" content="//localhost:1313/learning/machine_learning/unsupervised_learning/" />
+  <meta property="og:title" content="Unsupervised learning | Christophe Troalen" />
+  <meta property="og:description" content="A highly-customizable Hugo résumé theme powered by Hugo Blox Builder." /><meta property="og:image" content="//localhost:1313/media/icon_hu46dc342dc73747a5b6d02fd72281b953_24285_512x512_fill_lanczos_center_3.png" />
+    <meta property="twitter:image" content="//localhost:1313/media/icon_hu46dc342dc73747a5b6d02fd72281b953_24285_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta property="og:updated_time" content="2022-10-24T00:00:00&#43;00:00" />
+    
+  
+
+  
+
+
+
+
+  <title>Unsupervised learning | Christophe Troalen</title>
+
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <style>
+    @font-face {
+      font-family: 'Inter var';
+      font-style: normal;
+      font-weight: 100 900;
+      font-display: swap;
+      src: url(/dist/font/Inter.var.woff2) format(woff2);
+    }
+  </style>
+
+  
+
+  
+  
+
+
+  
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+  
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+  
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+  
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+  
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+  
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link type="text/css" rel="stylesheet" href="/dist/lib/katex/katex.min.505d5f829022bb7b4f24dfee0aa1141cd7bba67afe411d1240335f820960b5c3.css" integrity="sha256-UF1fgpAiu3tPJN/uCqEUHNe7pnr&#43;QR0SQDNfgglgtcM=" />
+  
+  
+  <script defer src="/dist/lib/katex/katex.min.dc84b296ec3e884de093158f760fd9d45b6c7abe58b5381557f4e138f46a58ae.js" integrity="sha256-3ISyluw&#43;iE3gkxWPdg/Z1Ftser5YtTgVV/ThOPRqWK4="></script>
+  
+  
+  
+  
+  <script defer src="/js/katex-renderer.6579ec9683211cfb952064aedf3a3baea5eeb17a061775b32b70917474637c80.js" integrity="sha256-ZXnsloMhHPuVIGSu3zo7rqXusXoGF3WzK3CRdHRjfIA="></script>
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  <script
+    defer
+    src="/js/hugo-blox-en.min.js"
+    integrity=""
+  ></script>
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+  <body class="dark:bg-hb-dark dark:text-white page-wrapper" id="top">
+    <div id="page-bg"></div>
+    <div class="page-header sticky top-0 z-30">
+      
+      
+      
+        
+        
+        
+          <header id="site-header" class="header">
+  <nav class="navbar px-3 flex justify-left">
+    <div class="order-0 h-100">
+      
+      <a class="navbar-brand" href="/" title="Christophe Troalen">
+            
+          
+        
+        
+      </a>
+    </div>
+    
+    <input id="nav-toggle" type="checkbox" class="hidden" />
+    <label
+      for="nav-toggle"
+      class="order-3 cursor-pointer flex items-center lg:hidden text-dark dark:text-white lg:order-1">
+      <svg id="show-button" class="h-6 fill-current block" viewBox="0 0 20 20">
+        <title>Open Menu</title>
+        <path d="M0 3h20v2H0V3z m0 6h20v2H0V9z m0 6h20v2H0V0z"></path>
+      </svg>
+      <svg id="hide-button" class="h-6 fill-current hidden" viewBox="0 0 20 20">
+        <title>Close Menu</title>
+        <polygon
+          points="11 9 22 9 22 11 11 11 11 22 9 22 9 11 -2 11 -2 9 9 9 9 -2 11 -2"
+          transform="rotate(45 10 10)"></polygon>
+      </svg>
+    </label>
+    
+
+    
+    
+    <ul
+      id="nav-menu"
+      class="navbar-nav order-3 hidden lg:flex w-full pb-6 lg:order-1 lg:w-auto lg:space-x-2 lg:pb-0 xl:space-x-8 justify-left
+      mr-auto ml-6">
+      
+      
+      
+      
+      
+      
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          
+          href="/"
+        >Résumé</a
+        >
+      </li>
+      
+      
+      
+      
+      
+      
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          
+          href="/learning/"
+        >Learning</a
+        >
+      </li>
+      
+      
+      
+      
+      
+      
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          
+          href="/uses/"
+        >Projects</a
+        >
+      </li>
+      
+      
+      
+    </ul>
+
+    <div class="order-1 ml-auto flex items-center md:order-2 lg:ml-0">
+
+      
+      
+      
+
+      
+      
+      <div class="px-3 text-black hover:text-primary-700 dark:text-white dark:hover:text-primary-300
+            [&.active]:font-bold [&.active]:text-black/90 dark:[&.active]:text-white">
+        <button class="theme-toggle mt-1" accesskey="t" title="appearance">
+          <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+               fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+               stroke-linejoin="round" class="dark:hidden">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+               fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+               stroke-linejoin="round" class=" dark:block [&:not(dark)]:hidden">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+      </div>
+      
+
+      
+      
+
+      
+      
+    </div>
+  </nav>
+</header>
+
+
+
+        
+      
+    </div>
+    <div class="page-body ">
+      
+
+  
+  
+    
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="section-markdown" class="relative hbb-section blox-markdown  " style="padding: 6rem 0 6rem 0;" >
+ <div class="home-section-bg " >
+   
+ </div>
+  
+
+  
+
+    
+
+
+
+
+
+
+
+
+
+<div class="flex flex-col items-center max-w-prose mx-auto gap-3 justify-center">
+
+  <div class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">
+    
+  </div>
+
+  
+  <div class="prose prose-slate lg:prose-xl dark:prose-invert max-w-prose"><h2 id="curse-of-dimensionality">Curse of dimensionality</h2>
+<p>Most datasets in real-case scenarios are <em>high-dimensional</em> with hundreds of features. For instance, the k-nearest neighbours algorithm would need exponentially more data points to maintaing a measure of &ldquo;closeness&rdquo; between them. The computation time also increases substantially in high dimensions, and the k-NN algorithm may become infeasible.</p>
+<p>The k-NN classifier makes the assumption that similar points share similar labels. Unfortunately, in high dimensional spaces, points that are drawn from a probability distribution, tend to never be close together. We can illustrate this on a simple example. We will draw points uniformly at random within the unit cube and we will investigate how much space the $k$ nearest neighbors of a test point inside this cube will take up.</p>
+<p>Formally, consider the unit cube $[0,1]^d$. All training data is sampled uniformly within this cube, i.e. $\forall i, x_i \in [0,1]^d$, and we are considering the $k=10$ nearest neighbors of such a test point.</p>
+<p>Let $l$ be the edge length of the smallest hyper-cube that contains all $k$-nearest neighbor of a test point. Then $l \approx (\frac{k}{n})^{\frac{1}{d}}$.</p>
+<p>If $d=100, l=0.955$; if $d=1,000, l=0.995$. In this case, the k-NN are not particularly closer (and therefore more similar) than any other data points in the training set. Why would the test point share the label with those k-nearest neighbors, if they are not actually similar to it?</p>
+<p>One might think that one rescue could be to increase the number of training samples, $n$, until the nearest neighbors are truly close to the test point. However, in this case $n=\frac{k}{l^d}$ would grow exponentially. This illustrates the principle of <em>curse of dimentionality</em>.</p>
+<h2 id="dimensionality-reduction">Dimensionality reduction</h2>
+<p>We want to find a low-dimensional representation that captures the statistical properties of high-dimensional data.</p>
+<p>The main applications are among the following:</p>
+<ul>
+<li>Compress and visualize data</li>
+<li>Preprocess data before supervised learning to improve model performance and reduce overfitting</li>
+<li>Simplify the description of massive datasets by removing uninformative dimensions</li>
+<li>Reduce storage and computational costs</li>
+</ul>
+<p>Some dimensionality reduction methods include <em>Principal Components Analysis</em> (PCA), <em>Kernel PCA</em>, <em>Nonnegative Matrix Factorisation</em> (NMF), <em>Linear Discriminant Analysis</em> (LDA), <em>Generalised Discriminant Analysis</em> (GDA), <em>Nonlinear independent component analysis</em> (ICA), <em>Uniform manifold approximation</em> (UMA), <em>Locally Linear Embedding</em> (LLE), and also <em>Random Forests</em>.</p>
+<h2 id="principal-component-analysis-pca">Principal Component Analysis (PCA)</h2>
+<p>Principal component analysis is a multivariate technique which allows to analye the statistical structure of high dimensional dependent observations by representing data using orthogonal variables called principal components.</p>
+<p>There are several equivalent ways of deriving the principal components mathematically. The simplest one is by finding the projections which maximize the variance. The first principal component is the direction in space along which projections have the largest variance. The second principal component is the direction which
+maximizes variance among all directions orthogonal to the first. The $k$th component is the variance-maximizing direction orthogonal to the previous $k-1$ components. There are $p$ principal components in all.
+Rather than maximizing variance, it might sound more plausible to look for the projection with the smallest average (mean-squared) distance between the original vectors and their projections on to the principal components; this turns out to be equivalent to maximizing the variance.</p>
+<p>Let $(X_i)_{1\leq i\leq n}$ be iid random variables in $\mathbb{R}^d$ and consider the matrix $X\in\mathbb{R}^{n\times d}$ such that the $i$-th row of $X$ is the observation $X_i^T$.</p>
+<p>We assume that data are preprocessed so that the columns of $X$ are centered. Let $\Sigma_n$ be the empirical covariance matrix:</p>
+$$\Sigma_n = \frac{1}{n}\Sigma_{i=1}^nX_iX_i^T$$
+<p>We can reduce the dimensionality of the observations $(X_i)$ using a compression matrix $W \in \mathbb{R}^{p\times d}$ with $p\leq d$ so that for each $1\leq i \leq n, WX_i$ is a low dimensional representation of $X_i$.</p>
+<p>The original observation may then be partially recovered using another matrix $U \in \mathbb{R}^{d\times p}$.</p>
+<p>PCA computes $U$ and $W$ using the least squares approach:</p>
+$$\left(U_{\star}, W_{\star}\right) \underset{(U, W) \in \mathbb{R}^{d \times p} \times \mathbb{R}^{p \times d}}{\mathop{\text{argmin}}} \Sigma_{i=1}^n\left\|X_i-U W X_i\right\|^2$$
+<p>Let $(U_*, W_*) \in \mathbb{R}^{d \times p} \times \mathbb{R}^{p \times d}$ be a solution. Then, the columns of $U_*$ are orthonormal and $W_* = U_*^T$.</p>
+<p>For all $U \in \mathbb{R}^{d \times p}$ such that $U^TU = I_p$, we have:</p>
+$$\sum_{i=1}^n \|X_i - UU^T X_i\|^2 = \sum_{i=1}^n \|X_i\|^2 - \operatorname{trace}(U^T X X^T U)$$
+<p>Therefore, solving the PCA problem boils down to computing</p>
+$$U_{\star} \in \underset{U \in \mathbb{R}^{d \times p}, U^T U = I_p}{\operatorname{argmax}} \operatorname{trace}\left(U^T \Sigma_n U\right)$$
+<p>Let $v_1, ..., v_d$ be orthonormal eigenvectors associated with the eigenvalues $\lambda_1 \geq ... \geq \lambda_d$ of $\Sigma_n$. Then a solution to the PCA problem is given by the matrix $U_*$ with columns $\lbrace v_1, ..., v_p \rbrace$.
+Here is the pseudo-code of the PCA algorithm:</p>
+<ol>
+<li>Center $X\in\mathbb{R}^{n\times d}$.</li>
+<li>Compute the covariance matrix $\Sigma_n$, obtain its eigenvectors $v_i \in \mathbb{R}^{d}$ sorted by eigenvalues in decreasing order.</li>
+<li>Build the matrice $U_* = (v_1, ..., v_p) \in \mathbb{R}^{d \times p}$ by stacking the $p$ eigenvectors $v_i$ alongside one another.</li>
+<li>Compressed data are given by $Z = XU_* \in \mathbb{R}^{n \times p}$.</li>
+</ol>
+<p>PCA only allows dimensionality reduction based on principal components which are linear combinations of the variables. When the data has more complex structures which cannot be well represented in a linear subspace, standard PCA fails. Kernel PCA allows us to generalize standard PCA to nonlinear dimensionality reduction.</p>
+<h2 id="cluster-analysis">Cluster analysis</h2>
+<ul>
+<li>
+<p>The <em>K-means algorithm</em> classifies $n$ points into $k$ clusters in a vector space, based on their distance to each other. It starts by randomly chosing the representant of each cluster-sometimes referred as <em>centroids</em>, and then iteratively assigns each of the $n$ points to its closest centroid to obtain $k$ clusters. The centroid of the latters will be updated as the barycenter of the cluster&rsquo;s points. The algorithm goes on until it converges -which is when centroids remain the same between two consecutive iterations.</p>
+</li>
+<li>
+<p>The <em>K-medoids</em> is almost the same as <em>K-means</em>, the only difference relies in the definition of the centroids. The representant of the clusters are not defined as the barycenter but as the point of the cluster that minimises the average distance with its class neighbours. Therefore, it corresponds to a datapoint which wouldn&rsquo;t be always the case with K-Means.</p>
+</li>
+</ul>
+<h2 id="expectation-maximization-em-algorithm">Expectation-maximization (EM) algorithm</h2>
+<p>We consider statistical models where we do not have a complete data set of observations from $Z$.</p>
+<p>We will assume that the data $Z$ consists of <em>observed data</em> $Y = (Y_1, ..., Y_k)$ and <em>latent</em> (or <em>missing</em>) <em>data</em> $X = (X_1, ..., X_k)$. We assume that there exists $\theta \in \mathbb{R}^m$ and a probability density $(x,y) \mapsto p_{\theta}(x,y)$.</p>
+<p>With this notation, the log-likelihood function for the observed data $Y$ is:</p>
+$$\log p_{\theta}(Y) = \log \int p_{\theta}(x,Y)dx$$
+<p>As we don’t measure $X$, we cannot maximize $\theta \mapsto \log p_{\theta}(X,Y)$. We only have access to $Y$ and thus $\theta \mapsto \log p_{\theta}(Y)$.</p>
+<p>The main difficulty is we cannot compute $p_{\theta}(y) = \int p_{\theta}(x,y)dx$ so we can&rsquo;t maximize it directly. The EM algorithm instead computes an auxiliary quantity, generating a sequence of estimators $(\theta^{(p)})_{p \geq 0}$ which optimize <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> the log-likelihood as follows:</p>
+<ol>
+<li>$\theta^{(0)}$: randomly initialized.</li>
+<li><em>(E-step)</em>: For all $k \geq 0$, compute:</li>
+</ol>
+$$
+\begin{align}
+\begin{aligned}
+    Q(\theta; \theta^{(k)}) &= E_{\theta^{(k)}}[\log p_{\theta}(X,Y) \mid Y] \\
+    &= \int \log p_{\theta}(x,Y) p_{\theta^{(k)}}(x \mid Y) dx
+\end{aligned}
+\end{align}
+$$
+<ol start="3">
+<li><em>(M-step)</em>: define $$\theta^{(k+1)} \in \operatorname{Argmax}_{\theta \in \mathbb{R}^m} Q(\theta; \theta^{(k)})$$</li>
+</ol>
+<p>The procedure is iterated until the algorithm converges. The EM algorithm always increases the likelihood, that is: $\log p_{\theta^{(k+1)}}(Y) \geq \log p_{\theta^{(k)}}(Y)$. Indeed, we have through Bayes&rsquo; rule the following result:</p>
+$$\log p_{\theta}(Y) = Q(\theta, \theta^{(k)}) - E_{\theta^{(k)}}[\log p_{\theta}(X|Y)|Y]$$
+<p>Thus,</p>
+$$\log p_{\theta}(Y) - \log p_{\theta^{(k)}}(Y) = Q(\theta, \theta^{(k)}) - Q(\theta^{(k)}, \theta^{(k)}) + E_{\theta^{(k)}}[\log p_{\theta^{(k)}}(X|Y)|Y] - E_{\theta^{(k)}}[\log p_{\theta}(X|Y)|Y]$$
+<p>But</p>
+$$
+E_{\theta^{(k)}}[\log p_{\theta^{(k)}}(X \mid Y) \mid Y] - E_{\theta^{(k)}}[\log p_{\theta}(X \mid Y) \mid Y] = E_{\theta^{(k)}}\left[\log \frac{p_{\theta^{(k)}}(X \mid Y)}{p_{\theta}(X \mid Y)} \mid Y \right] := KL\left(p_{\theta^{(k)}}(\cdot \mid Y) \| p_{\theta}(\cdot \mid Y)\right)
+$$
+<p>The latter quantity is known as the <em>Kullback-Leibler divergence</em>, and is positive by definition. Indeed, since $-\log$ is convex, we have:
+</p>
+$$KL\left(p_{\theta^{(k)}}(\cdot \mid Y) \| p_{\theta}(\cdot \mid Y)\right) = E_{\theta^{(k)}}\left[-\log \frac{p_{\theta}(X|Y)}{p_{\theta^{(k)}}(X|Y)} \mid Y \right] \geq -\log E_{\theta^{(k)}}\left[\frac{p_{\theta}(X|Y)}{p_{\theta^{(k)}}(X|Y)} \mid Y \right] = 0$$
+<p>In addition, since $\theta^{(k+1)} \in \operatorname{Argmax}_{\theta \in \mathbb{R}^m} Q(\theta; \theta^{(k)})$, we have: $Q(\theta^{(k+1)}, \theta^{(k)}) - Q(\theta^{(k)}, \theta^{(k)}) \geq 0$,
+which concludes the proof.</p>
+<h2 id="detailed-derivations-for-m-step-in-gaussian-mixture-models">Detailed Derivations for M-Step in Gaussian Mixture Models</h2>
+<p>The Expectation (E) step calculates the posterior probabilities (responsibilities) $\gamma(z_{nk})$, which represent the probability that the $n$-th observation is generated by the $k$-th Gaussian component. The Maximization (M) step then updates the parameters based on these responsibilities.</p>
+<h3 id="updating-mu_k">Updating $\mu_k$</h3>
+<p>To derive the update for the means ($\mu_k$) of each Gaussian component, we consider the Q function defined in the E-step:</p>
+$$
+Q(\theta; \theta^{(k)}) = \mathbb{E}_{\theta^{(k)}}[\log p_{\theta}(X, Y) | Y]
+$$
+<p>Breaking it down for the Gaussian Mixture Model, and focusing on the $\mu_k$ update, we derive:</p>
+$$
+Q(\theta; \theta^{(k)}) = \sum_{n=1}^N \sum_{k=1}^K \gamma(z_{nk}) \log \left( \pi_k \mathcal{N}(y_n | \mu_k, \Sigma_k) \right)
+$$
+<p>For Gaussian distributions:</p>
+$$
+\mathcal{N}(y_n | \mu_k, \Sigma_k) = \frac{1}{\sqrt{(2\pi)^d |\Sigma_k|}} \exp \left(-\frac{1}{2} (y_n - \mu_k)^T \Sigma_k^{-1} (y_n - \mu_k)\right)
+$$
+<p>To maximize $Q$ with respect to $\mu_k$, we take the derivative of $Q$ with respect to $\mu_k$ and set it to zero:</p>
+$$
+\frac{\partial Q}{\partial \mu_k} = \sum_{n=1}^N \gamma(z_{nk}) \Sigma_k^{-1} (y_n - \mu_k) = 0
+$$
+<p>This yields:</p>
+$$
+\sum_{n=1}^N \gamma(z_{nk}) y_n = \sum_{n=1}^N \gamma(z_{nk}) \mu_k
+$$
+<p>Therefore, the updated mean $\mu_k$ is:</p>
+$$
+\mu_k = \frac{\sum_{n=1}^N \gamma(z_{nk}) y_n}{\sum_{n=1}^N \gamma(z_{nk})}
+$$
+<h3 id="updating-sigma_k">Updating $\Sigma_k$</h3>
+<p>Similarly, to update the covariance matrices $\Sigma_k$, we maximize $Q$ by taking the derivative with respect to $\Sigma_k$ and setting it to zero. The derivation considers the second term in the exponential of the Gaussian density:</p>
+$$
+\frac{\partial Q}{\partial \Sigma_k} = \sum_{n=1}^N \gamma(z_{nk}) \left[ -\frac{1}{2} \Sigma_k^{-1} + \frac{1}{2} \Sigma_k^{-1} (y_n - \mu_k) (y_n - \mu_k)^T \Sigma_k^{-1} \right] = 0
+$$
+<p>Solving this gives:</p>
+$$
+\Sigma_k = \frac{\sum_{n=1}^N \gamma(z_{nk}) (y_n - \mu_k) (y_n - \mu_k)^T}{\sum_{n=1}^N \gamma(z_{nk})}
+$$
+<h3 id="conclusion">Conclusion</h3>
+<p>The derived formulas for $\mu_k$ and $\Sigma_k$ are used in the M-step to update the parameters of the Gaussian components based on the current estimates of the responsibilities $\gamma(z_{nk})$ computed in the E-step. This process iterates until convergence, ensuring each step either improves or retains the likelihood of the observed data under the model. You can check my streamlit <a href="https://emalgorithm-m9upjzdzpacfujan7cvnqr.streamlit.app/" target="_blank" rel="noopener">application</a> for a visual illustration of the EM algorithm.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>The EM algorithm may converge to a <em>local</em> but not necessarily <em>global</em> maximum.&quot;&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+
+
+  
+
+  
+</section>
+
+  
+
+
+    </div>
+    <div class="page-footer">
+      <footer class="container mx-auto flex flex-col justify-items-center text-sm leading-6 mt-24 mb-4 text-slate-700 dark:text-slate-200">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+    
+  
+  
+    
+  
+
+  
+
+  
+  <p class="powered-by text-center">
+    © 2024 Me. This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank">CC BY NC ND 4.0</a>
+  </p>
+  
+
+  <p class="powered-by footer-license-icons">
+    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank" aria-label="Creative Commons">
+      <i class="fab fa-creative-commons fa-2x" aria-hidden="true"></i>
+      <i class="fab fa-creative-commons-by fa-2x" aria-hidden="true"></i>
+      
+        <i class="fab fa-creative-commons-nc fa-2x" aria-hidden="true"></i>
+      
+      
+        <i class="fab fa-creative-commons-nd fa-2x" aria-hidden="true"></i>
+      
+    </a>
+  </p>
+
+
+
+
+
+  <p class="powered-by text-center">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://hugoblox.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Hugo Blox Builder</a> — the free, <a href="https://github.com/HugoBlox/hugo-blox-builder" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+
+</footer>
+
+    </div>
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

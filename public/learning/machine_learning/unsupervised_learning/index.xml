@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Unsupervised learning | Christophe Troalen</title>
+    <link>//localhost:1313/learning/machine_learning/unsupervised_learning/</link>
+      <atom:link href="//localhost:1313/learning/machine_learning/unsupervised_learning/index.xml" rel="self" type="application/rss+xml" />
+    <description>Unsupervised learning</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 24 Oct 2022 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>//localhost:1313/media/icon_hu46dc342dc73747a5b6d02fd72281b953_24285_512x512_fill_lanczos_center_3.png</url>
+      <title>Unsupervised learning</title>
+      <link>//localhost:1313/learning/machine_learning/unsupervised_learning/</link>
+    </image>
+    
+  </channel>
+</rss>
