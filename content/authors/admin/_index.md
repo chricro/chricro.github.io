@@ -19,6 +19,7 @@ role: Machine Learning Researcher
 organizations:
   - name: Stealth Startup
 
+
 # Social network links
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
 profiles:
@@ -26,13 +27,7 @@ profiles:
     url: https://github.com/chricro
   - icon: brands/linkedin
     url: https://www.linkedin.com/troalenchristophe
-quick_education:
-  - block: markdown
-    id: section-1
-    content:
-      title: Section 1
-      subtitle: A subtitle
-      text: Add any **markdown** formatted content here - text, images, videos, galleries - and even HTML code!
+
 education:
   - area: MSc Statistics
     institution: Imperial College London
@@ -51,7 +46,7 @@ education:
       - Deep Learning
       - Advanced statistical finance
     
-  - area: MEng Data Science
+  - area: MEng in Data Science
     institution: Télécom SudParis - Institut Polytechnique de Paris
     date_start: 2020-09-01
     date_end: 2023-05-01
@@ -74,7 +69,8 @@ education:
     date_start: 2017-09-01
     date_end: 2020-06-01
     summary: |
-      
+      Intensive undergraduate studies in mathematics and physics preparing for competitive entry examinations to engineering schools.
+
       Courses included:
       - Mathematics, physics, programming, french philosophy and english.
 work:
@@ -95,8 +91,7 @@ work:
     date_start: 2023-05-01
     date_end: 2023-09-30
     summary: |
-      - Focused on filtering and smoothing geospatial data with heavy-tailed distributed errors, supervised by Prof. Adam Sykulski and Prof. Alessandra Luati. (Grade: distinction)
-      - Effectively presented results, data, and conclusions to PhD students and professors (MSc Best Research Poster Presentation: 1st/60).
+      - Thesis: focused on filtering and smoothing geospatial data with heavy-tailed distributed errors, supervised by Prof. Adam Sykulski and Prof. Alessandra Luati. (Grade: distinction)
     button: |
     text: 'Read Thesis'
     url: 'https://example.com'
@@ -221,4 +216,35 @@ awards:
 
 ---
 
-I am currently a Machine Learning Research in a startup in AI based in London.
+I recently graduated from a MSc in Statistics at Imperial College London and a MEng specialized in data science at Télécom SudParis. I am currently working as a Machine Learning Research in a startup in AI based in London.
+
+<div style="display: flex; justify-content: space-between; margin-top: 20px;">
+  <div style="flex: 1; padding: 20px; margin: 0 10px;">
+    <h3>Interests</h3>
+    <ul style="list-style: none; padding: 0;">
+      <li>• Statistics</li>
+      <li>• Machine Learning</li>
+      <li>• Generative artificial intelligence</li>
+      <li>• Finance</li>
+      <!-- More items here -->
+    </ul>
+  </div>
+  <div style="flex: 1; padding: 20px; margin: 0 10px;">
+    <h3>Education</h3>
+    <ul style="list-style: none; padding: 0;">
+      <li>
+        <i class="" style="margin-right: 5px;"></i> <!-- Replace with the actual icon class if needed -->
+        <strong>🎓 MSc Statistics</strong>, 2022-2023<br>Imperial College London
+      </li>
+      <li>
+        <i class="ai/coursera" style="margin-right: 5px;"></i> <!-- Replace "ai/coursera" with the actual icon class -->
+        <strong>🎓 MEng</strong>, 2020-2023<br>Télécom SudParis
+      </li>
+      <li>
+        <i class="ai/coursera" style="margin-right: 5px;"></i> <!-- Replace "ai/coursera" with the actual icon class -->
+        <strong>🎓 Classe préparatoire</strong>, 2017-2020<br>Lycée Clemenceau de Nantes
+      </li>
+      <!-- More items here -->
+    </ul>
+  </div>
+</div>

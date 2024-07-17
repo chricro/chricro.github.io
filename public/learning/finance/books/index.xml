@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Supervised learning | Christophe Troalen</title>
-    <link>//localhost:49751/learning/machine_learning/supervised_learning/</link>
-      <atom:link href="//localhost:49751/learning/machine_learning/supervised_learning/index.xml" rel="self" type="application/rss+xml" />
+    <link>//localhost:49751/learning/finance/books/</link>
+      <atom:link href="//localhost:49751/learning/finance/books/index.xml" rel="self" type="application/rss+xml" />
     <description>Supervised learning</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 24 Oct 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>//localhost:49751/media/icon_hu0bec72ef54b5f45099be8f472a43f3f7_2903391_512x512_fill_lanczos_center_3.png</url>
       <title>Supervised learning</title>
-      <link>//localhost:49751/learning/machine_learning/supervised_learning/</link>
+      <link>//localhost:49751/learning/finance/books/</link>
     </image>
     
   </channel>

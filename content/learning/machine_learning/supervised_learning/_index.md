@@ -13,7 +13,7 @@ sections:
   content:
     text: |-
 
-        ## Approaches to Classification
+        ## Classification
 
         **Generative Approach**
 
@@ -40,7 +40,7 @@ sections:
         **Naive Bayes Classifier**
 
         This classifier selects the class that maximizes the posterior probability given the observation:
-        $$\text{argmax}_k p(y = k \mid x) = \text{argmax}_k p(x \mid y = k) p(y = k)$$
+        $$\text{argmax}_k \{ p(y = k \mid x) \}= \text{argmax}_k \{ p(x \mid y = k) p(y = k) \}$$
 
         Naive Bayes simplifies the computation by assuming conditional independence among features:
         $$p(x|y = k) = \prod_{i=1}^d p(x_i|y = k,\theta_{ik})$$
@@ -100,7 +100,7 @@ sections:
 
         One neuron is a multi-class extension of the logistic regression model.
 
-        # Regression:
+        ## Regression
 
         **Multidimensional Framework**
 
