@@ -12,24 +12,42 @@ sections:
 - block: markdown
   content:
     text: |-
+        <span style="font-family: palatino; font-size: 14px;">
 
-        ## Curse of dimensionality
+        # Unsupervised Learning
 
-        Most datasets in real-case scenarios are *high-dimensional* with hundreds of features. For instance, the k-nearest neighbours algorithm would need exponentially more data points to maintaing a measure of "closeness" between them. The computation time also increases substantially in high dimensions, and the k-NN algorithm may become infeasible.
+        ## Curse of Dimensionality
 
-        The k-NN classifier makes the assumption that similar points share similar labels. Unfortunately, in high dimensional spaces, points that are drawn from a probability distribution, tend to never be close together. We can illustrate this on a simple example. We will draw points uniformly at random within the unit cube and we will investigate how much space the $k$ nearest neighbors of a test point inside this cube will take up.
+        In many real-world scenarios, datasets feature hundreds or even thousands of dimensions, presenting significant challenges for machine learning algorithms. This phenomenon, known as the *curse of dimensionality*, particularly affects distance-based algorithms like k-nearest neighbors (k-NN).
 
-        Formally, consider the unit cube $[0,1]^d$. All training data is sampled uniformly within this cube, i.e. $\forall i, x_i \in [0,1]^d$, and we are considering the $k=10$ nearest neighbors of such a test point.
+        **Challenges in High-Dimensional Spaces**
 
-        Let $l$ be the edge length of the smallest hyper-cube that contains all $k$-nearest neighbor of a test point. Then $l \approx (\frac{k}{n})^{\frac{1}{d}}$.
+        The k-NN algorithm operates on the premise that similar data points generally share similar labels. However, in high-dimensional spaces, the distance between points tends to increase, and points become almost equidistant from each other. This effect dilutes the meaning of "nearest neighbors" since all points appear to be roughly the same distance from each other.
 
-        If $d=100, l=0.955$; if $d=1,000, l=0.995$. In this case, the k-NN are not particularly closer (and therefore more similar) than any other data points in the training set. Why would the test point share the label with those k-nearest neighbors, if they are not actually similar to it?
+        **Illustrative Example**
 
-        One might think that one rescue could be to increase the number of training samples, $n$, until the nearest neighbors are truly close to the test point. However, in this case $n=\frac{k}{l^d}$ would grow exponentially. This illustrates the principle of *curse of dimentionality*.
+        Consider a unit cube \([0,1]^d\) where each dimension \(d\) represents a feature of the dataset. Assume that the training data consists of points sampled uniformly within this cube. For instance, when considering the \(k=10\) nearest neighbors of a test point, we analyze the edge length \(l\) of the smallest hyper-cube that contains all these neighbors. Mathematically, \(l\) is approximated by:
+
+        \[
+        l \approx \left(\frac{k}{n}\right)^{\frac{1}{d}}
+        \]
+
+        If \(d=100\), \(l=0.955\); if \(d=1,000\), \(l=0.995\). With such high values of \(d\), the nearest neighbors are not significantly closer—and thus not more similar—than any other points in the training set. This undermines the fundamental assumption of the k-NN that nearest neighbors share similar labels.
+
+        **Implications**
+
+        Increasing the number of training samples \(n\) might seem like a solution to ensure that the nearest neighbors are truly close to the test point. However, this would require \(n\) to grow exponentially, which is impractical:
+
+        \[
+        n = \frac{k}{l^d}
+        \]
+
+        This example highlights the curse of dimensionality: as the number of dimensions increases, maintaining the effectiveness of algorithms like k-NN becomes exponentially harder.
+
 
         ## Dimensionality reduction
 
-        We want to find a low-dimensional representation that captures the statistical properties of high-dimensional data.
+        Now that we have observed the challenges posed by high-dimensional data, it may be beneficial to seek a low-dimensional representation that retains the essential statistical properties of the high-dimensional data.
 
         The main applications are among the following:
 
@@ -51,8 +69,8 @@ sections:
         Let $(X_i)_{1\leq i\leq n}$ be iid random variables in $\mathbb{R}^d$ and consider the matrix $X\in\mathbb{R}^{n\times d}$ such that the $i$-th row of $X$ is the observation $X_i^T$.
         
         We assume that data are preprocessed so that the columns of $X$ are centered. Let $\Sigma_n$ be the empirical covariance matrix:
-
-        $$\Sigma_n = \frac{1}{n}\Sigma_{i=1}^nX_iX_i^T$$
+        
+        $$\Sigma_n = \frac{1}{n} \sum\limits_{i=1}^n X_i X_i^T$$
 
         We can reduce the dimensionality of the observations $(X_i)$ using a compression matrix $W \in \mathbb{R}^{p\times d}$ with $p\leq d$ so that for each $1\leq i \leq n, WX_i$ is a low dimensional representation of $X_i$.
 
@@ -60,7 +78,7 @@ sections:
 
         PCA computes $U$ and $W$ using the least squares approach:
 
-        $$\left(U_{\star}, W_{\star}\right) \underset{(U, W) \in \mathbb{R}^{d \times p} \times \mathbb{R}^{p \times d}}{\mathop{\text{argmin}}} \Sigma_{i=1}^n\left\|X_i-U W X_i\right\|^2$$
+        $$\left(U_{\star}, W_{\star}\right) \underset{(U, W) \in \mathbb{R}^{d \times p} \times \mathbb{R}^{p \times d}}{\mathop{\text{argmin}}} \sum_{i=1}^n\left\|X_i-U W X_i\right\|^2$$
 
         Let $(U_*, W_*) \in \mathbb{R}^{d \times p} \times \mathbb{R}^{p \times d}$ be a solution. Then, the columns of $U_*$ are orthonormal and $W_* = U_*^T$.
 
@@ -106,12 +124,12 @@ sections:
         2. *(E-step)*: For all $k \geq 0$, compute:
 
         $$
-        \begin{align}
+        \begin{align*}
         \begin{aligned}
             Q(\theta; \theta^{(k)}) &= E_{\theta^{(k)}}[\log p_{\theta}(X,Y) \mid Y] \\
             &= \int \log p_{\theta}(x,Y) p_{\theta^{(k)}}(x \mid Y) dx
         \end{aligned}
-        \end{align}
+        \end{align*}
         $$
 
         3. *(M-step)*: define $$\theta^{(k+1)} \in \operatorname{Argmax}_{\theta \in \mathbb{R}^m} Q(\theta; \theta^{(k)})$$
@@ -197,4 +215,5 @@ sections:
         The derived formulas for $\mu_k$ and $\Sigma_k$ are used in the M-step to update the parameters of the Gaussian components based on the current estimates of the responsibilities $\gamma(z_{nk})$ computed in the E-step. This process iterates until convergence, ensuring each step either improves or retains the likelihood of the observed data under the model. You can check my streamlit [application](https://emalgorithm-m9upjzdzpacfujan7cvnqr.streamlit.app/) for a visual illustration of the EM algorithm.
 
         [^1]: The EM algorithm may converge to a *local* but not necessarily *global* maximum."
+        </span>
 ---

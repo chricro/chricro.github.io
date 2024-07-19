@@ -12,6 +12,8 @@ sections:
 - block: markdown
   content:
     text: |-
+        <span style="font-family: palatino; font-size: 14px;">
+
         # Learning notes
         This part of the website is currently under construction. It collects a compilation of my notes on a variety of subjects, including statistics, machine learning, generative artificial intelligence, and finance.
 
@@ -36,5 +38,7 @@ sections:
         As someone eager to apply my statistical and machine learning knowledge to practical problems and real-world scenarios, I find finance to be a fascinating field for research and exploration.
 
         1. [Book Excerpts](finance/books/): Here are extracts from books that I find interesting and educational, as well as areas I am willing to explore.
+
+        </span>
 
 ---

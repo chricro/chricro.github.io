@@ -12,6 +12,9 @@ sections:
 - block: markdown
   content:
     text: |-
+        <span style="font-family: palatino; font-size: 14px;">
+
+        # Supervised learning
 
         ## Classification
 
@@ -145,5 +148,5 @@ sections:
 
         Since $\mathbb{V}[Y] = \sigma_*^2 I_n$, we have:
         $$ \mathbb{V}[\hat{\beta}_n] = \sigma_*^2 (X^T X)^{-1} $$
-
+        </span>
 ---

@@ -12,7 +12,9 @@ sections:
 - block: markdown
   content:
     text: |-
-        # Introduction to LLMs
+        <span style="font-family: palatino; font-size: 14px;">
+
+        # Large Language Models (LLM)
 
         ## Fundamental papers on LLMs
 
@@ -141,5 +143,7 @@ sections:
         See the [LLM index](https://sapling.ai/llm/index?WT.mc_id=academic-105485-koreyst) for more model comparisons.
 
         The Chinchilla law introduced in the now called [*Chinchilla paper*](https://arxiv.org/pdf/2203.15556) tries to introduce a rule of thumbs for the ideal dataset size given the size of the model. It specifies that the number of tokens during training (dataset size including epochs) should be ~20x the number of parameters of the model. BloombergGPT is a model trained on financial data following this rule and is performing well. I am not sure how much this law is reliable though.
+
+        </span>
 
 ---

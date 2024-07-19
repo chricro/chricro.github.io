@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Home | Christophe Troalen</title>
-    <link>//localhost:49751/</link>
-      <atom:link href="//localhost:49751/index.xml" rel="self" type="application/rss+xml" />
+    <link>//localhost:1313/</link>
+      <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <description>Home</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 24 Oct 2023 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>//localhost:49751/media/icon_hu0bec72ef54b5f45099be8f472a43f3f7_2903391_512x512_fill_lanczos_center_3.png</url>
+      <url>//localhost:1313/media/icon_hu0bec72ef54b5f45099be8f472a43f3f7_2903391_512x512_fill_lanczos_center_3.png</url>
       <title>Home</title>
-      <link>//localhost:49751/</link>
+      <link>//localhost:1313/</link>
     </image>
     
   </channel>

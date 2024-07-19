@@ -2,31 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:49751/</loc>
+    <loc>//localhost:1313/</loc>
     <lastmod>2023-10-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>//localhost:49751/learning/</loc>
+    <loc>//localhost:1313/learning/</loc>
     <lastmod>2022-10-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>//localhost:49751/learning/ai/resources/</loc>
+    <loc>//localhost:1313/learning/ai/resources/</loc>
     <lastmod>2022-10-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>//localhost:49751/learning/ai/llm/</loc>
+    <loc>//localhost:1313/learning/ai/llm/</loc>
     <lastmod>2022-10-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>//localhost:49751/learning/finance/books/</loc>
+    <loc>//localhost:1313/learning/finance/books/</loc>
     <lastmod>2022-10-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>//localhost:49751/learning/machine_learning/supervised_learning/</loc>
+    <loc>//localhost:1313/learning/machine_learning/supervised_learning/</loc>
     <lastmod>2022-10-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>//localhost:49751/learning/machine_learning/unsupervised_learning/</loc>
+    <loc>//localhost:1313/learning/machine_learning/unsupervised_learning/</loc>
     <lastmod>2022-10-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>

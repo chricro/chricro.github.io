@@ -8,11 +8,20 @@ design:
   # Default section spacing
   spacing: "6rem"
 
+
 sections:
 - block: markdown
   content:
     text: |-
-    
+        <span style="font-family: palatino; font-size: 14px;">
+
+        # Financial lectures
+
+        <div style="display: flex; justify-content: center;">
+        <img src="images/blackbox.jpg" alt="Image alt" width="300"/>
+        </div>
+
+
         ## Inside the Black Box: A Simple Guide to Quantitative and High-Frequency Trading, 2nd Edition
 
         * p.7: Quants typically make markets more efficient for other participants by providing liquidity when other traders' needs cause a temporary imbalance in the supply and demande for a security. (...) Riskless profit, or arbitrage, is not the only-or even primary- way in which quants improve efficiency. The main inefficiencies quants eliminate (and, thereby, profit from) are not absolute and unassailable,  but rather are probabilistic and require risk taking. (example: statistical arbitrage)
@@ -44,5 +53,6 @@ sections:
         * book-to-price ratio: calculated by dividing the market price per share by the book value per share. Interpretation: P/B < 1: the stock is potentially undervalued / the company is performing poorly / the market doesn't believe the company's assets are worth the value on its balance sheet. A stock with a higher book-to-price ratio might outperform stocks with lower book-to-price ratios over the coming quarters.
 
         Company Financial Transactions: Only transactions that the company itself engages in, such as issuing new shares, repurchasing shares, or acquiring assets, affect the book value.
+        </span>
 
 ---
