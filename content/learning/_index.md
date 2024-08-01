@@ -15,7 +15,7 @@ sections:
         <span style="font-family: palatino; font-size: 14px;">
 
         # Learning notes
-        This part of the website is currently under construction. It collects a compilation of my notes on a variety of subjects, including statistics, machine learning, generative artificial intelligence, and finance.
+        This website collects a compilation of my notes on a variety of topics including statistics, machine learning, generative artificial intelligence, and finance. This part of the website is currently under construction. 
 
         ## Statistical learning
 
