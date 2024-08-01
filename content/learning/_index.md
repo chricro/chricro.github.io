@@ -35,7 +35,7 @@ sections:
         Here are some notes on Generative AI that I wrote while working full-time at a startup.
 
         - [An overview of large language models](ai/llm/): Pretraining, instruction fine-tuning, alignment techniques. Frameworks to deploy LLMs efficiently, optimization of inference. How to improve reasoning. Vision transformers.
-        - [Useful resources](ai/resources/): Benchmarks and leaderboards, interesting blogs and github resources.
+        - [Useful resources](ai/ressources/): Benchmarks and leaderboards, interesting blogs and github resources.
 
         ## Finance - systematic trading
 
