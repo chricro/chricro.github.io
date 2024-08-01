@@ -49,7 +49,7 @@ sections:
 
         The key idea is to randomly drop units (along with their connections) from the neural network during training. This significantly reduces overfitting and gives major improvements over other regularization methods.
 
-        Dropping a unit out means temporarily removing it from the network, along with all its incoming and outgoing connections
+        Dropping a unit out means temporarily removing it from the network, along with all its incoming and outgoing connections.
 
         Dropout simulates a sparse activation from a given layer, which interestingly, in turn, encourages the network to actually learn a sparse representation as a side-effect. As such, it may be used as an alternative to activity regularization for encouraging sparse representations in autoencoder models.
 
