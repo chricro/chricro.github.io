@@ -26,6 +26,10 @@ sections:
         - [Supervised learning](machine_learning/supervised_learning/): Generative approache (LDA/GDA, Naive Bayes) vs discriminant approach (logistic regression).
         - [Unsupervised learning](machine_learning/unsupervised_learning/): Dimension reduction (PCA, Kernel PCA). Unsupervised clustering (K-means, K-medoids). Latent data (EM algorithm).
 
+        * Notes about [Deep learning](machine_learning/deep_learning/): loss optimization, regularization, ...
+        * Notes about [Big Data](machine_learning/big_data/): hadoop, spark...
+
+
         ## Generative AI
 
         Here are some notes on Generative AI that I wrote while working full-time at a startup.

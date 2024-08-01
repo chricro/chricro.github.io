@@ -44,7 +44,7 @@
   <meta name="description" content="Machine Learning Researcher" />
 
   
-  <link rel="alternate" hreflang="en-us" href="//localhost:1313/404.html" />
+  <link rel="alternate" hreflang="en-us" href="//localhost:1313/learning/machine_learning/big_data/" />
 
   
   
@@ -156,12 +156,14 @@
 
   
   
+    <link rel="alternate" href="/learning/machine_learning/big_data/index.xml" type="application/rss+xml" title="Christophe Troalen" />
+  
 
   
   <link rel="icon" type="image/png" href="/media/icon_hu0bec72ef54b5f45099be8f472a43f3f7_2903391_32x32_fill_lanczos_center_3.png" />
   <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu0bec72ef54b5f45099be8f472a43f3f7_2903391_180x180_fill_lanczos_center_3.png" />
 
-  <link rel="canonical" href="//localhost:1313/404.html" />
+  <link rel="canonical" href="//localhost:1313/learning/machine_learning/big_data/" />
 
   
   
@@ -187,11 +189,13 @@
     <meta property="twitter:creator" content="@GetResearchDev" />
   
   <meta property="og:site_name" content="Christophe Troalen" />
-  <meta property="og:url" content="//localhost:1313/404.html" />
-  <meta property="og:title" content="404 Page not found | Christophe Troalen" />
+  <meta property="og:url" content="//localhost:1313/learning/machine_learning/big_data/" />
+  <meta property="og:title" content="Deep learning | Christophe Troalen" />
   <meta property="og:description" content="Machine Learning Researcher" /><meta property="og:image" content="//localhost:1313/media/icon_hu0bec72ef54b5f45099be8f472a43f3f7_2903391_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="//localhost:1313/media/icon_hu0bec72ef54b5f45099be8f472a43f3f7_2903391_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
   
+    
+      <meta property="og:updated_time" content="2022-10-24T00:00:00&#43;00:00" />
     
   
 
@@ -200,7 +204,7 @@
 
 
 
-  <title>404 Page not found | Christophe Troalen</title>
+  <title>Deep learning | Christophe Troalen</title>
 
   
   
@@ -300,6 +304,26 @@
         
         
       
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+  
     
       
       
@@ -781,38 +805,180 @@
         
       
     </div>
-    <div class="page-body  my-10">
-      <div class="flex flex-col justify-center">
-  <article class="container mx-auto prose prose-slate lg:prose-xl dark:prose-invert">
-    <h1 class="lg:text-6xl">Page not found</h1>
+    <div class="page-body ">
+      
+
+  
+  
+    
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="section-markdown" class="relative hbb-section blox-markdown  " style="padding: 6rem 0 6rem 0;" >
+ <div class="home-section-bg " >
+   
+ </div>
+  
+
+  
 
     
 
-    <p>Perhaps you were looking for one of these?</p>
 
-    
-    
-    
-    <h2>Latest</h2>
-    <ul>
-      
-      <li><a href="/learning/machine_learning/unsupervised_learning/">Unsupervised learning</a></li>
-      
-      <li><a href="/learning/machine_learning/supervised_learning/">Supervised learning</a></li>
-      
-      <li><a href="/learning/finance/books/">Supervised learning</a></li>
-      
-      <li><a href="/learning/ai/llm/">Large Language Models (LLM)</a></li>
-      
-      <li><a href="/learning/ai/resources/">Generative AI ressources</a></li>
-      
-      <li><a href="/learning/machine_learning/deep_learning/">Deep learning</a></li>
-      
-    </ul>
-    
 
-  </article>
+
+
+
+
+
+
+<div class="flex flex-col items-center max-w-prose mx-auto gap-3 justify-center">
+
+  <div class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">
+    
+  </div>
+
+  
+  <div class="prose prose-slate lg:prose-xl dark:prose-invert max-w-prose"><span style="font-family: palatino; font-size: 14px;">
+<h1 id="big-data">Big Data</h1>
+<h2 id="hadoop">Hadoop</h2>
+<p><strong>Hadoop Distributed File System (HDFS)</strong>: HDFS is designed to store data across multiple machines, providing high fault tolerance and easy scalability. It divides large data blocks into smaller blocks distributed across multiple nodes in a cluster, allowing for parallel processing. This parallelisation enables to exceed the storage capacity of any individual machine and also allows for failures of machines without compromising the system.</p>
+<p><strong>MapReduce</strong>: This is Hadoop’s processing module, which handles data processing by dividing the task into smaller parts, processing them in parallel across different nodes (Map phase), and then combining the results to produce the final output (Reduce phase).</p>
+<p>A set of machines running HDFS and MapReduce is called a <em>Hadoop cluster</em>, and the individual machines are known as <em>nodes</em>, or, more precisely, DataNodes. A group of nodes (usually between 30 and 50) connected to the same network switch is also known as <em>rack</em>, and a large Hadoop cluster consists of multiple racks.</p>
+<p>The syntax in the FS shell is very similar to the standard commands used in Unix shells:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">hadoop fs -ls # to list all the files in the user&#39;s home directory on HDFS
+</span></span><span class="line"><span class="cl">hadoop fs -mkdir data # create a directory named data
+</span></span><span class="line"><span class="cl">hadoop fs -cp data/testdata.txt testdata2.txt # copies the dataset testdata.txt from the directory data to the user home directory
+</span></span></code></pre></div><h2 id="mapreduce">MapReduce</h2>
+<p>The MapReduce paradigm is inspired by the map and reduce functions in Lisp. The map function takes a &lt;key, value&gt; pair as input and can return one or more &lt;key, value&gt; pairs as output. The shuffle and sort phase is executed across all the &lt;key, value&gt; pairs submitted, allowing keys from across the cluster to be sent to the same reducer. Shuffling refers to the process of transferring &lt;key, value&gt; pairs from the mappers to the reducers. These pairs are then sorted by key.</p>
+<p>The shuffle and sort phase is executed automatically in Hadoop MapReduce. Therefore, MapReduce is ideal for sorting large datasets (mapper is outputs &lt;line,_ &gt;, reducer is identity). MapReduce is also useful for searching (mapper finds matched patterns and outputs &lt;line,_&gt; if this is the case, reducer is identity).</p>
+<p>When possible, it is always recommended to use a combiner, which is a mini-reducer that is applied locally on the output of the map function to reduce the amount of data passed to the reducer.</p>
+<p><strong>Challenges:</strong></p>
+<ol>
+<li>Disk-based Storage: Hadoop stores data on disks, which can be slower than memory storage, affecting the speed of data processing. (high I/O)</li>
+<li>Batch Processing: Hadoop processes data in batches, meaning it must complete one batch before starting another. This sequential dependency can lead to delays, as processes need to wait for the completion of preceding tasks.</li>
+</ol>
+<h2 id="apache-spark-2013">Apache Spark (2013)</h2>
+<p>Resilient Distributed Datasets (RDDs): Spark introduces the concept of RDDs, an abstraction that lets programmers perform in-memory computations on large clusters in a fault-tolerant manner. RDDs are designed to be cached across computing nodes in a cluster, which drastically improves the speed of iterative algorithms and interactive data mining tasks. Spark can be up to 100 times faster than Hadoop when data is stored in memory; and up to 10 times faster when accessing disk.</p>
+<ul>
+<li><strong>Driver Process</strong>: The driver process runs the main() function of the application and is the central coordinator, analyzing the operations to perform and then distributing tasks to executors.</li>
+<li><strong>Executors</strong>: Executors are processes that run computations and store data for the application on worker nodes. Each executor runs multiple tasks in multiple threads.</li>
+<li><strong>Spark Session</strong>: The entry point for programming Spark applications. It&rsquo;s created by the Spark driver and allows the user to programmatically interact with the Spark cluster. Through a Spark session, dataframes can be manipulated, which are distributed collections of data, organized into named columns and partitioned across the cluster.</li>
+</ul>
+<p><strong>Dataframe Partitions</strong>: Dataframes in Spark are distributed across different machines in a cluster. Each machine handles a slice or &ldquo;partition&rdquo; of the dataframe, allowing for distributed data processing and fault tolerance.</p>
+<p>Spark can be launched with <em>pyspark</em> command, which loades within the environment a SparkContext <em>sc</em> and SparkSession <em>spark</em>. SparkSession objects represent the entry point for programming with DataFrames.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">import pyspark
+</span></span><span class="line"><span class="cl">sc = pyspark.SparkContext(appName=&#39;appName&#39;)
+</span></span><span class="line"><span class="cl">from pyspark.sql import SparkSession
+</span></span><span class="line"><span class="cl">spark = SparkSession.builder.appName(&#39;appName&#39;).getOrCreate()
+</span></span></code></pre></div><p>Actions return values to the driver after running a computation, or export data to a storage.
+The command <em>take(n)</em> is an action which returns the $n$ top rows from a single data partition.
+The command <em>reduce(func)</em> is an action which reduces the elements of an RDD using a function func in two arguments. The command <em>count()</em> returns the number of elements in the RDD.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">numbers.reduce(lambda x,y: x+y)
+</span></span><span class="line"><span class="cl">poem.count()
+</span></span><span class="line"><span class="cl">set.foreach(lambda x: print(x))
+</span></span></code></pre></div><p>Typically, DataFrames in PySpark are created using a SparkSession, mainly in two ways:</p>
+<ol>
+<li>From an existing RDD, using spark.createDataFrame, where spark is the default SparkSession in PySpark;</li>
+<li>Importing data from data sources in persistent memory.</li>
+</ol>
+<p>ML is Spark&rsquo;s machine learning library, which operates exclusively on DataFrames. Its predecessor MLlib only operates on RDDs.</p>
+<p>ML has three main abstract classes:</p>
+<ul>
+<li>transformer: preprocess data</li>
+<li>estimator: statistical models fitted on the observed data</li>
+<li>pipeline: end-to-end combination of transformer and estimator to provide a complete framework for data analysis</li>
+</ul>
 </div>
+</div>
+
+
+  
+
+  
+</section>
+
+  
+
+
     </div>
     <div class="page-footer">
       <footer class="container mx-auto flex flex-col justify-items-center text-sm leading-6 mt-24 mb-4 text-slate-700 dark:text-slate-200">
