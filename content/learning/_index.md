@@ -33,11 +33,11 @@ sections:
         - [An overview of large language models](ai/llm/): Pretraining, instruction fine-tuning, alignment techniques. Frameworks to deploy LLMs efficiently, optimization of inference. How to improve reasoning. Vision transformers.
         - [Useful resources](ai/resources/): Benchmarks and leaderboards, interesting blogs and github resources.
 
-        ## Finance
+        ## Finance - systematic trading
 
         As someone eager to apply my statistical and machine learning knowledge to practical problems and real-world scenarios, I find finance to be a fascinating field for research and exploration.
 
-        1. [Book Excerpts](finance/books/): Here are extracts from books that I find interesting and educational, as well as areas I am willing to explore.
+        1. [Financial notions](finance/books/): Here are extracts from books that I find interesting and educational, as well as areas I am currently exploring and summarising.
 
         </span>
 

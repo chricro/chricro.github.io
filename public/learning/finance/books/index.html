@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- This site was created with Hugo Blox. https://hugoblox.com -->
-<!-- Last Published: July 19, 2024 --><html lang="en-us" dir="ltr"
+<!-- Last Published: July 25, 2024 --><html lang="en-us" dir="ltr"
       data-wc-theme-default="system">
   
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
@@ -882,7 +882,7 @@
 <div style="display: flex; justify-content: center;">
 <img src="images/blackbox.jpg" alt="Image alt" width="300"/>
 </div>
-<h2 id="inside-the-black-box-a-simple-guide-to-quantitative-and-high-frequency-trading-2nd-edition">Inside the Black Box: A Simple Guide to Quantitative and High-Frequency Trading, 2nd Edition</h2>
+<h2 id="inside-the-black-box-a-simple-guide-to-quantitative-and-high-frequency-trading-2nd-edition-rishi-k-narang">Inside the Black Box: A Simple Guide to Quantitative and High-Frequency Trading, 2nd Edition, Rishi K. Narang</h2>
 <ul>
 <li>p.7: Quants typically make markets more efficient for other participants by providing liquidity when other traders&rsquo; needs cause a temporary imbalance in the supply and demande for a security. (&hellip;) Riskless profit, or arbitrage, is not the only-or even primary- way in which quants improve efficiency. The main inefficiencies quants eliminate (and, thereby, profit from) are not absolute and unassailable,  but rather are probabilistic and require risk taking. (example: statistical arbitrage)</li>
 <li>p.10: Discretionary investors often find it very difficult to realize losses, whereas they are quick to realize gains. This is a well-documented behavioral bias known as the disposition effect.</li>
@@ -905,6 +905,73 @@
 <li>p.41: there are measures found, for example, in companie&rsquo;s financial statements, including changes in discretionary accruals (the idea being, the greater the increase in discretionary accruals, the more likely there are problems with the management&rsquo;s stewardship of the company).</li>
 <li>p.44: the data-mining strategy requires nearly constant adjustment to keep up with the changes going on in markets, an activity that has many risks in itself.</li>
 </ul>
+<h2 id="various-lectures">Various lectures</h2>
+<p>** De la physique statistique aux sciences sociales, Jean-Philippe Bouchaud (2020-2021)</p>
+<p><a href="https://www.youtube.com/watch?v=AFW90xdIPy8" target="_blank" rel="noopener">Youtube</a>:</p>
+<p>Théorie de la spéculation par Louis Jean-Baptiste Alphonse Bachelier (1870-1946), thèse encadrée par Henri Poincaré (1900). Invention du mouvement brownien (5 ans avant Einstein) et découverte de ses propriétés, formule de valorisation des options (72 ans avant Black-Scholes).</p>
+<p>In large organisations a range of instruments and data will be stored. Here are some of the instruments that might be of interest to a firm:</p>
+<ul>
+<li>Equities</li>
+<li>Equity Options</li>
+<li>Indices</li>
+<li>Foreign Exchange</li>
+<li>Interest Rates</li>
+<li>Futures</li>
+<li>Commodities</li>
+<li>Bonds - Government and Corporate</li>
+<li>Derivatives - Caps, Floors, Swaps</li>
+</ul>
+<p>The most basic method to store financial data is through flat-file storage, such as CSV files. However, these files do not support querying and perform poorly when managing large datasets. As an alternative, document stores or NoSQL databases are often used due to their flexibility in not requiring predefined table schemas. Examples of popular document stores include MongoDB, Cassandra, and CouchDB. Despite their advantages, NoSQL databases are not ideally suited for handling time-series data, such as high-resolution pricing information.</p>
+<p>Backtesting provides a host of advantages for algorithmic trading. However, it is not always possible to straightforwardly backtest a strategy. In general, as the frequency of the strategy increases, it becomes harder to correctly model the microstructure effects of the market and exchanges. This leads to less reliable backtests and thus a trickier evaluation of a chosen strategy. This is a particular problem where the execution system is the key to the strategy performance, as with ultra-high frequency algorithms.</p>
+<h2 id="biases-affecting-strategy-backtests">Biases affecting strategy backtests</h2>
+<ul>
+<li>optimisation bias</li>
+<li>look-ahead bias</li>
+<li>survivorship bias</li>
+<li>psychological tolerance bias</li>
+</ul>
+<h2 id="market-efficiency">Market efficiency</h2>
+<p><strong>Imperfect Market Efficiency</strong>: In a perfectly efficient market, all available information about asset values is already reflected in their prices. If this were the case, there would be no incentive for anyone to gather further information, as it would not lead to any profitable trading opportunities. Everyone would assume that asset prices are always correct, which would eliminate the motivation to seek out and act on new information.</p>
+<p>Because markets are not perfectly efficient, there is an opportunity for traders, especially institutional ones like hedge funds, to gather information that is not yet reflected in market prices. By identifying undervalued or overvalued assets based on this additional information, these traders can buy or sell these assets for a profit before the market corrects itself.</p>
+<p>The market’s inefficiency must be at a level that still provides enough potential for profit to justify the costs and efforts involved in information gathering and trading. If the market were too efficient, the small margins would not cover these costs, discouraging the activity. Conversely, if the market were highly inefficient, opportunities for profit would be so abundant that rapid trading by well-informed participants would quickly eliminate these inefficiencies.</p>
+<p>Hedge funds invest significant resources in sophisticated research to detect price inefficiencies and act on them. Their trading helps to move prices closer to their “true” values, thereby contributing to market efficiency. However, they must continually adapt and find new inefficiencies as their successful trades will naturally help to correct the inefficiencies they exploit.</p>
+<h2 id="put-call-parity">Put-Call Parity</h2>
+<p><strong>Put-call parity</strong> is a fundamental principle in options pricing, which establishes a defined price relationship between a call option, a put option, and their underlying stock. According to put-call parity, the combination of a long call option and a short put option should have the same return as if one owned the stock and owed a fixed amount of cash, assuming the options have the same strike price and expiration date.</p>
+<h3 id="formula">Formula</h3>
+<p>The put-call parity formula is expressed as:</p>
+$$
+C - P = S - E e^{-r(T-t)}
+$$
+<ul>
+<li><strong>C</strong> = Current price of the European call option</li>
+<li><strong>P</strong> = Current price of the European put option</li>
+<li><strong>S</strong> = Current stock price</li>
+<li><strong>E</strong> = Strike price of the options</li>
+<li><strong>e</strong> = Base of the natural logarithm</li>
+<li><strong>r</strong> = Risk-free annual interest rate</li>
+<li><strong>T</strong> = Time to maturity of the options</li>
+<li><strong>t</strong> = Current time</li>
+</ul>
+<h3 id="financial-interpretation">Financial Interpretation</h3>
+<ul>
+<li><strong>Arbitrage Opportunity</strong>: If the relationship described by put-call parity does not hold, arbitrage opportunities may exist, allowing risk-free profits.</li>
+<li><strong>Hedging Strategy</strong>: Put-call parity provides a basis for constructing equivalent positions that can help in hedging.</li>
+</ul>
+<p>More information on these <a href="https://personalpages.manchester.ac.uk/staff/sergei.fedotov/20912lecture7.pdf" target="_blank" rel="noopener">lectures notes</a></p>
+<h3 id="what-is-a-market-maker">What is a Market Maker?</h3>
+<p>A market maker is a key participant in financial markets, constantly buying securities from sellers and selling to buyers. This activity provides essential liquidity, ensuring that securities can be traded quickly and at fair prices, thus bolstering investor confidence.</p>
+<p><strong>Role and Importance</strong></p>
+<p>Market makers are crucial during volatile market conditions as they provide liquidity and depth, allowing for the quick buying and selling of securities in large volumes.
+They help stabilize market prices and bridge the gap between supply and demand, contributing to a more orderly trading environment.
+•	Efficient Capital Allocation: Particularly during events like IPOs, market makers facilitate an orderly trading process, ensuring efficient capital flows and supporting broader economic growth.</p>
+<p><strong>Benefits to Investors</strong></p>
+<p>•	Price Improvement: For retail investors, market makers often offer better pricing than what is available on public exchanges, leading to significant savings and more accessible financial opportunities.</p>
+<p><strong>Operational Excellence</strong></p>
+<p>•	Innovation and Competition: Market makers compete fiercely with other participants, necessitating continuous innovation, advanced predictive analytics, and robust systems to enhance trading outcomes.
+•	Risk Management: They must adeptly manage market risks and anticipate shifts in market dynamics to maintain profitability, primarily earning through the ‘bid-ask spread’—the difference between buying prices and selling prices.</p>
+<p><strong>Regulation and Industry Impact</strong></p>
+<p>•	Regulatory Compliance: Market making is a highly regulated sector, with entities commonly registered with major financial regulatory bodies worldwide.
+•	Collaboration with Regulators: Market makers work closely with regulators to align on priorities and contribute positively to market structures, reinforcing investor confidence and ensuring market integrity.</p>
 <h2 id="from-my-readings-here-are-some-areasnotions-i-need-to-explore">From my readings, here are some areas/notions I need to explore:</h2>
 <ul>
 <li>index fund</li>
@@ -912,7 +979,8 @@
 <li>book-to-price ratio: calculated by dividing the market price per share by the book value per share. Interpretation: P/B &lt; 1: the stock is potentially undervalued / the company is performing poorly / the market doesn&rsquo;t believe the company&rsquo;s assets are worth the value on its balance sheet. A stock with a higher book-to-price ratio might outperform stocks with lower book-to-price ratios over the coming quarters.</li>
 </ul>
 <p>Company Financial Transactions: Only transactions that the company itself engages in, such as issuing new shares, repurchasing shares, or acquiring assets, affect the book value.
-</span></p></div>
+</span></p>
+</div>
 </div>
 
 

@@ -22,7 +22,7 @@ sections:
         </div>
 
 
-        ## Inside the Black Box: A Simple Guide to Quantitative and High-Frequency Trading, 2nd Edition
+        ## Inside the Black Box: A Simple Guide to Quantitative and High-Frequency Trading, 2nd Edition, Rishi K. Narang
 
         * p.7: Quants typically make markets more efficient for other participants by providing liquidity when other traders' needs cause a temporary imbalance in the supply and demande for a security. (...) Riskless profit, or arbitrage, is not the only-or even primary- way in which quants improve efficiency. The main inefficiencies quants eliminate (and, thereby, profit from) are not absolute and unassailable,  but rather are probabilistic and require risk taking. (example: statistical arbitrage)
         * p.10: Discretionary investors often find it very difficult to realize losses, whereas they are quick to realize gains. This is a well-documented behavioral bias known as the disposition effect.
@@ -45,6 +45,96 @@ sections:
         * p.41: there are measures found, for example, in companie's financial statements, including changes in discretionary accruals (the idea being, the greater the increase in discretionary accruals, the more likely there are problems with the management's stewardship of the company).
         * p.44: the data-mining strategy requires nearly constant adjustment to keep up with the changes going on in markets, an activity that has many risks in itself.
 
+        ## Various lectures
+
+        ** De la physique statistique aux sciences sociales, Jean-Philippe Bouchaud (2020-2021)
+
+        [Youtube](https://www.youtube.com/watch?v=AFW90xdIPy8):
+
+        Théorie de la spéculation par Louis Jean-Baptiste Alphonse Bachelier (1870-1946), thèse encadrée par Henri Poincaré (1900). Invention du mouvement brownien (5 ans avant Einstein) et découverte de ses propriétés, formule de valorisation des options (72 ans avant Black-Scholes). 
+
+        In large organisations a range of instruments and data will be stored. Here are some of the instruments that might be of interest to a firm:
+        - Equities
+        - Equity Options
+        - Indices
+        - Foreign Exchange
+        - Interest Rates
+        - Futures
+        - Commodities
+        - Bonds - Government and Corporate
+        - Derivatives - Caps, Floors, Swaps
+        
+        The most basic method to store financial data is through flat-file storage, such as CSV files. However, these files do not support querying and perform poorly when managing large datasets. As an alternative, document stores or NoSQL databases are often used due to their flexibility in not requiring predefined table schemas. Examples of popular document stores include MongoDB, Cassandra, and CouchDB. Despite their advantages, NoSQL databases are not ideally suited for handling time-series data, such as high-resolution pricing information.
+
+        Backtesting provides a host of advantages for algorithmic trading. However, it is not always possible to straightforwardly backtest a strategy. In general, as the frequency of the strategy increases, it becomes harder to correctly model the microstructure effects of the market and exchanges. This leads to less reliable backtests and thus a trickier evaluation of a chosen strategy. This is a particular problem where the execution system is the key to the strategy performance, as with ultra-high frequency algorithms.
+
+        ## Biases affecting strategy backtests
+        - optimisation bias
+        - look-ahead bias
+        - survivorship bias
+        - psychological tolerance bias
+
+        ## Market efficiency
+
+        **Imperfect Market Efficiency**: In a perfectly efficient market, all available information about asset values is already reflected in their prices. If this were the case, there would be no incentive for anyone to gather further information, as it would not lead to any profitable trading opportunities. Everyone would assume that asset prices are always correct, which would eliminate the motivation to seek out and act on new information.
+
+        Because markets are not perfectly efficient, there is an opportunity for traders, especially institutional ones like hedge funds, to gather information that is not yet reflected in market prices. By identifying undervalued or overvalued assets based on this additional information, these traders can buy or sell these assets for a profit before the market corrects itself.
+        
+        The market’s inefficiency must be at a level that still provides enough potential for profit to justify the costs and efforts involved in information gathering and trading. If the market were too efficient, the small margins would not cover these costs, discouraging the activity. Conversely, if the market were highly inefficient, opportunities for profit would be so abundant that rapid trading by well-informed participants would quickly eliminate these inefficiencies.
+        
+        Hedge funds invest significant resources in sophisticated research to detect price inefficiencies and act on them. Their trading helps to move prices closer to their “true” values, thereby contributing to market efficiency. However, they must continually adapt and find new inefficiencies as their successful trades will naturally help to correct the inefficiencies they exploit.
+
+        ## Put-Call Parity
+
+        **Put-call parity** is a fundamental principle in options pricing, which establishes a defined price relationship between a call option, a put option, and their underlying stock. According to put-call parity, the combination of a long call option and a short put option should have the same return as if one owned the stock and owed a fixed amount of cash, assuming the options have the same strike price and expiration date.
+
+        ### Formula
+
+        The put-call parity formula is expressed as:
+
+        $$
+        C - P = S - E e^{-r(T-t)}
+        $$
+
+        - **C** = Current price of the European call option
+        - **P** = Current price of the European put option
+        - **S** = Current stock price
+        - **E** = Strike price of the options
+        - **e** = Base of the natural logarithm
+        - **r** = Risk-free annual interest rate
+        - **T** = Time to maturity of the options
+        - **t** = Current time
+
+        ### Financial Interpretation
+
+        - **Arbitrage Opportunity**: If the relationship described by put-call parity does not hold, arbitrage opportunities may exist, allowing risk-free profits.
+        - **Hedging Strategy**: Put-call parity provides a basis for constructing equivalent positions that can help in hedging.
+
+        More information on these [lectures notes](https://personalpages.manchester.ac.uk/staff/sergei.fedotov/20912lecture7.pdf)
+
+        ### What is a Market Maker?
+
+        A market maker is a key participant in financial markets, constantly buying securities from sellers and selling to buyers. This activity provides essential liquidity, ensuring that securities can be traded quickly and at fair prices, thus bolstering investor confidence.
+
+        **Role and Importance**
+
+        Market makers are crucial during volatile market conditions as they provide liquidity and depth, allowing for the quick buying and selling of securities in large volumes.
+        They help stabilize market prices and bridge the gap between supply and demand, contributing to a more orderly trading environment.
+          •	Efficient Capital Allocation: Particularly during events like IPOs, market makers facilitate an orderly trading process, ensuring efficient capital flows and supporting broader economic growth.
+
+        **Benefits to Investors**
+
+          •	Price Improvement: For retail investors, market makers often offer better pricing than what is available on public exchanges, leading to significant savings and more accessible financial opportunities.
+
+        **Operational Excellence**
+
+          •	Innovation and Competition: Market makers compete fiercely with other participants, necessitating continuous innovation, advanced predictive analytics, and robust systems to enhance trading outcomes.
+          •	Risk Management: They must adeptly manage market risks and anticipate shifts in market dynamics to maintain profitability, primarily earning through the ‘bid-ask spread’—the difference between buying prices and selling prices.
+
+        **Regulation and Industry Impact**
+
+          •	Regulatory Compliance: Market making is a highly regulated sector, with entities commonly registered with major financial regulatory bodies worldwide.
+          •	Collaboration with Regulators: Market makers work closely with regulators to align on priorities and contribute positively to market structures, reinforcing investor confidence and ensuring market integrity.
 
         ## From my readings, here are some areas/notions I need to explore:
 
