@@ -112,6 +112,28 @@ sections:
 
         More information on these [lectures notes](https://personalpages.manchester.ac.uk/staff/sergei.fedotov/20912lecture7.pdf)
 
+        ## Black-Scholes Formula
+
+        Price of a call option from a stock S: $V(S,t)$
+
+        We build a portfolio $\Pi = V(S,t) -\Delta S$
+
+        Therefore, $d\Pi = dV - \Delta dS$
+
+        The stock price can be modelled by a geometric brownian motion: $$dS = \mu Sdt + \sigma S dW$$ (drift term + volatility term)
+
+        From Ito's lemma: $$dV = \frac{dV}{dt}dt + \frac{dV}{dS}dS + \frac{1}{2} \frac{d^2V}{dS^2}dS^2$$
+
+        and stochastic calculus rules give $dS^2 = \sigma^2 S^2 dt$
+
+        Therefore, $$dV = \frac{dV}{dt}dt + \frac{dV}{dS}dS + \frac{1}{2} \sigma^2 S^2 \frac{d^2V}{dS^2}dt$$
+
+        so $$d\Pi = (\frac{dV}{dt} + \frac{1}{2} \sigma^2 S^2 \frac{d^2V}{dS^2}dS^2)dt + (\frac{dV}{dS} - \Delta)dS$$
+
+        Setting $\Delta = \frac{dV}{dS}$ removes any stochastic term, we obtain a risk-free portfolio, thus a risk-free rate: $$d\Pi = r\Pi dt = (rV - rS \frac{dV}{dS})dt$$
+
+        Equating both $dt$ term leads to the Black-Scholes PDE: $$\frac{dV}{dt} + \frac{1}{2} \sigma^2 S^2 \frac{d^2V}{dS^2}dS^2 + rS \frac{dV}{dS} - rV = 0$$
+
         ### What is a Market Maker?
 
         A market maker is a key participant in financial markets, constantly buying securities from sellers and selling to buyers. This activity provides essential liquidity, ensuring that securities can be traded quickly and at fair prices, thus bolstering investor confidence.

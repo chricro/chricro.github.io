@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- This site was created with Hugo Blox. https://hugoblox.com -->
-<!-- Last Published: August 1, 2024 --><html lang="en-us" dir="ltr"
+<!-- Last Published: August 5, 2024 --><html lang="en-us" dir="ltr"
       data-wc-theme-default="system">
   
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
@@ -998,6 +998,24 @@ $$
 <li><strong>Hedging Strategy</strong>: Put-call parity provides a basis for constructing equivalent positions that can help in hedging.</li>
 </ul>
 <p>More information on these <a href="https://personalpages.manchester.ac.uk/staff/sergei.fedotov/20912lecture7.pdf" target="_blank" rel="noopener">lectures notes</a></p>
+<h2 id="black-scholes-formula">Black-Scholes Formula</h2>
+<p>Price of a call option from a stock S: $V(S,t)$</p>
+<p>We build a portfolio $\Pi = V(S,t) -\Delta S$</p>
+<p>Therefore, $d\Pi = dV - \Delta dS$</p>
+<p>The stock price can be modelled by a geometric brownian motion: </p>
+$$dS = \mu Sdt + \sigma S dW$$
+<p> (drift term + volatility term)</p>
+<p>From Ito&rsquo;s lemma: </p>
+$$dV = \frac{dV}{dt}dt + \frac{dV}{dS}dS + \frac{1}{2} \frac{d^2V}{dS^2}dS^2$$
+<p>and stochastic calculus rules give $dS^2 = \sigma^2 S^2 dt$</p>
+<p>Therefore, </p>
+$$dV = \frac{dV}{dt}dt + \frac{dV}{dS}dS + \frac{1}{2} \sigma^2 S^2 \frac{d^2V}{dS^2}dt$$
+<p>so </p>
+$$d\Pi = (\frac{dV}{dt} + \frac{1}{2} \sigma^2 S^2 \frac{d^2V}{dS^2}dS^2)dt + (\frac{dV}{dS} - \Delta)dS$$
+<p>Setting $\Delta = \frac{dV}{dS}$ removes any stochastic term, we obtain a risk-free portfolio, thus a risk-free rate: </p>
+$$d\Pi = r\Pi dt = (rV - rS \frac{dV}{dS})dt$$
+<p>Equating both $dt$ term leads to the Black-Scholes PDE: </p>
+$$\frac{dV}{dt} + \frac{1}{2} \sigma^2 S^2 \frac{d^2V}{dS^2}dS^2 + rS \frac{dV}{dS} - rV = 0$$
 <h3 id="what-is-a-market-maker">What is a Market Maker?</h3>
 <p>A market maker is a key participant in financial markets, constantly buying securities from sellers and selling to buyers. This activity provides essential liquidity, ensuring that securities can be traded quickly and at fair prices, thus bolstering investor confidence.</p>
 <p><strong>Role and Importance</strong></p>
