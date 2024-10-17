@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Notes - Christophe Troalen</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: Georgia, Times, 'Times New Roman', serif;
+            color: #515151;
+            line-height: 1.75;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 60px;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            color: #313131;
+        }
+        .container {
+            display: flex;
+            gap: 60px;
+            margin-top: 2rem;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+        .content {
+            flex: 1;
+            padding-right: 60px; /* Add right padding */
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+        nav {
+            margin-bottom: 0;
+            display: flex;
+            align-items: center;
+        }
+        nav a {
+            margin-left: 1rem;
+            text-decoration: none;
+            color: #666;  /* Changed back to gray */
+            font-size: 1.2em;
+            position: relative;
+            transition: color 0.3s;
+        }
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #666;  /* Changed back to gray */
+            visibility: hidden;
+            transform: scaleX(0);
+            transition: all 0.3s ease-in-out;
+        }
+        nav a:hover::after {
+            visibility: visible;
+            transform: scaleX(1);
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #004080;
+            text-decoration: underline;
+        }
+        footer {
+            margin-top: 2rem;
+            font-size: 0.8em;
+            color: #999;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 2rem;
+        }
+        h1 {
+            margin-right: 1rem;
+        }
+        /* Ensure long lines of code wrap */
+        pre, code {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        /* Adjust table layout */
+        table {
+            width: 100%;
+            table-layout: fixed;
+            word-wrap: break-word;
+        }
+    </style>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    window.MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']],
+            processEscapes: true,
+            processEnvironments: true,
+            packages: ['base', 'ams', 'noerrors', 'noundefined']
+        },
+        options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        },
+        startup: {
+            pageReady: () => {
+                return MathJax.startup.defaultPageReady().then(() => {
+                    console.log('MathJax initial typesetting complete');
+                });
+            }
+        }
+    };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+    function handleDownload(event, pdfName, pdfUrl) {
+        event.preventDefault();
+        fetch(pdfUrl)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('PDF not found');
+                }
+                return response.blob();
+            })
+            .then(blob => {
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.style.display = 'none';
+                a.href = url;
+                a.download = pdfName + '.pdf';
+                document.body.appendChild(a);
+                a.click();
+                window.URL.revokeObjectURL(url);
+            })
+            .catch(error => {
+                console.error('Error downloading PDF:', error);
+                alert('The PDF is currently unavailable. You can still access the content on this page. We apologize for any inconvenience.');
+            });
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>
+            <a href="index.html" style="color: inherit; text-decoration: none;">Christophe Troalen</a>
+            <nav style="display: inline; margin-left: 1rem; font-size: 1rem; font-weight: normal;">
+                <a href="learning.html">Notes</a>
+                <a href="projects.html">Projects</a>
+            </nav>
+        </h1>
+    </header>
+
+    <main class="container">
+        <div class="content" id="markdownContent">
+            <p>Loading content...</p>
+        </div>
+    </main>
+
+    <script>
+        function loadMarkdownContent(url, targetId) {
+            console.log('Attempting to load:', url);
+            fetch(url)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response.text();
+                })
+                .then(text => {
+                    console.log('Markdown content received, length:', text.length);
+                    try {
+                        if (typeof marked === 'undefined') {
+                            throw new Error('marked library is not loaded');
+                        }
+                        // Keep all markdown links intact
+                        const html = marked.parse(text);
+                        document.getElementById(targetId).innerHTML = html;
+                        console.log('Markdown parsed successfully');
+
+                        if (typeof MathJax !== 'undefined' && MathJax.typesetPromise) {
+                            MathJax.typesetPromise([document.getElementById(targetId)])
+                                .then(() => {
+                                    console.log('MathJax typesetting complete');
+                                })
+                                .catch((err) => console.error('MathJax typesetting failed:', err.message));
+                        } else {
+                            console.warn('MathJax is not loaded or typesetPromise is not available');
+                        }
+                    } catch (error) {
+                        console.error('Error parsing markdown:', error);
+                        document.getElementById(targetId).innerHTML = `<p>Error parsing content: ${error.message}</p>`;
+                    }
+                })
+                .catch(error => {
+                    console.error('Error loading markdown:', error);
+                    document.getElementById(targetId).innerHTML = `<p>Error loading content: ${error.message}. Please try refreshing the page or contact the site administrator if the problem persists.</p>`;
+                });
+        }
+
+        // Wait for the page to load before attempting to load content
+        window.addEventListener('load', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const contentUrl = urlParams.get('content') || 'learning_index.md';
+            console.log('Content URL:', contentUrl);
+            loadMarkdownContent(contentUrl, 'markdownContent');
+        });
+    </script>
+
+    <footer>
+        <p>&copy; October 2024 Christophe Troalen. All rights reserved.</p>
+    </footer>
+</body>
+</html>
