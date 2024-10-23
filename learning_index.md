@@ -23,4 +23,5 @@ These notes were originally written for personal reference during my studies or 
 
 ## Miscellaneous Resources
 
+- Quick git guide[[Download PDF]](pdf_files/git.pdf)
 - [Miscellaneous](learning.html?content=learning/misc.md)
